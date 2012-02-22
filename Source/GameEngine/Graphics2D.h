@@ -20,7 +20,7 @@ namespace bt
   enum { ATTRIB_POSITION, ATTRIB_COLOR, ATTRIB_TEXCOORD };
   
   // All uniform here.
-  enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA};
+  enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, NUM_UNIFORMS};
   
   class Graphics2D: public Singleton<Graphics2D>
   {
@@ -31,13 +31,15 @@ namespace bt
     
     virtual void SetUseColor(bool useColor){};
     virtual void SetUseTexture(bool useTexture){};
-    virtual void SetTexture(Texture *texture){};
+    virtual void SetTexture(Texture *texture);
     virtual void SetAlpha(float alpha){};
     
     virtual void FreeTexture(Texture *texture){};
+    
+    virtual void DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h);
   protected:
     unsigned int programId;
-
+    unsigned int uniforms[NUM_UNIFORMS];
   };
 };
 

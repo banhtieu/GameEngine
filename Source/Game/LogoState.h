@@ -22,6 +22,7 @@ public:
   virtual void Update();
 protected:
   Texture *logo;
+  int logoFrame;
 };
 
 #endif

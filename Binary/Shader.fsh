@@ -18,16 +18,8 @@ void main()
 {
   lowp vec4 result = vec4(0.0, 0.0, 0.0, 0.0);
   
-  if (useColor)
-  {
-    result += colorVarying;
-  };
+  result = texture2D(texture, texcoordVarying);
+//  result = vec4(1.0, 0.0, 0.0, 1.0);
   
-  if (useTexture)
-  {
-    result += texture2D(texture, texcoordVarying);
-  };
-  
-  result.a = result.a * alphaBlender;
-  gl_FragColor = colorVarying;
+  gl_FragColor = result;
 }

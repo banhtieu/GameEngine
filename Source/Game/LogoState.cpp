@@ -13,14 +13,17 @@ using namespace bt;
 void LogoState::Init()
 {
   logo = Texture::LoadTexturePNG("logo.png");
+  logoFrame = 0;
 }
 
 void LogoState::Render()
 {
-  LOGI("Render Logo State");
+  Graphics2D *g = Graphics2D::GetInstance();
+  g->DrawTexture(logo, 20, 200, 0, 0, 512, 161);
+  g->DrawTexture(logo, 300, 300, 123*(logoFrame/10), 161, 123, 134);
+  logoFrame = (logoFrame + 1) % 40;
 };
 
 void LogoState::Update()
 {
-  LOGI("Update LogoState");
 }

@@ -82,7 +82,7 @@ FileSystem *fileSystem;
 {
     // Return YES for supported orientations
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
     } else {
         return YES;
     }
@@ -91,7 +91,7 @@ FileSystem *fileSystem;
 - (void)setupGL
 {
   [EAGLContext setCurrentContext:self.context];
-  glEnable(GL_DEPTH_TEST);
+//  glEnable(GL_DEPTH_TEST);
   
   // Init File System.
   NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -127,7 +127,7 @@ FileSystem *fileSystem;
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
-  glClearColor(1.00f, 0.65f, 0.65f, 1.0f);
+  glClearColor(0.00f, 0.00f, 0.00f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   application->Render();
   // Render Here..
