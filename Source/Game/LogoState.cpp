@@ -10,6 +10,11 @@
 #include "Graphics2D.h"
 using namespace bt;
 
+void LogoState::Init()
+{
+  logo = Texture::LoadTexturePNG("logo.png");
+}
+
 void LogoState::Render()
 {
   LOGI("Render Logo State");

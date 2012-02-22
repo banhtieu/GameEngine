@@ -22,12 +22,13 @@ namespace bt
     unsigned int width;
     unsigned int height;
     unsigned int textureId;
-    unsigned char *data;
+    unsigned int nChannels;
+    char *data;
     
     Texture();
     virtual ~Texture();
     
-    static Texture* LoadTexture(const char *filename);
+    static Texture* LoadTexturePNG(const char *filename);
   };
   
 };
