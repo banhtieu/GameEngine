@@ -56,7 +56,7 @@ void LogoState::Render(Graphics2D *g)
   
   g->SetColor(0xff00ff00);
   g->DrawLine(0, 0, SCREEN_W, SCREEN_H);
-  g->FillRectange(100, 100, 200, 200);
+  g->FillCircle(100, 100, 50);
 
 };
 

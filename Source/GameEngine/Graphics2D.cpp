@@ -7,6 +7,7 @@
 //
 
 #include "Engine.h"
+#include <math.h>
 
 #if defined(ANDROID_OS) || defined(WIN32)
 
@@ -257,6 +258,27 @@ void Graphics2D::DrawRectangle(int x, int y, int w, int h)
 
 void Graphics2D::DrawCirle(int x, int y, int r)
 {
+  float vertices[36];
+  float step = M_PI / 8;
+  for (int i = 0; i < 18; i++)
+  {
+    vertices[i * 2] = x + r * cos(i * step);
+    vertices[i * 2 + 1] = y + r * sin(i * step);
+  }
+  
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
+  glEnableVertexAttribArray(ATTRIB_POSITION);
+  
+  glBindTexture(GL_TEXTURE_2D, 0);
+  
+  Matrix33 result = screen * transform;
+  
+  glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) result.value.m);
+  glUniform1i(uniforms[USE_COLOR], 1);
+  glUniform1f(uniforms[ALPHA], alphaBlender);
+  glUniform4f(uniforms[COLOR], color.r, color.g, color.b, color.a);
+  
+  glDrawArrays(GL_LINE_LOOP, 0, 18);
   
 }
 
@@ -279,7 +301,30 @@ void Graphics2D::FillRectange(int x, int y, int w, int h)
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 }
 
+// Fill the circle...
 void Graphics2D::FillCircle(int x, int y, int r)
 {
+  float vertices[38];
+  float step = M_PI / 8;
+  vertices[0] = x;
+  vertices[1] = y;
+  for (int i = 1; i < 19; i++)
+  {
+    vertices[i * 2] = x + r * cos(i * step);
+    vertices[i * 2 + 1] = y + r * sin(i * step);
+  }
   
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
+  glEnableVertexAttribArray(ATTRIB_POSITION);
+  
+  glBindTexture(GL_TEXTURE_2D, 0);
+  
+  Matrix33 result = screen * transform;
+  
+  glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) result.value.m);
+  glUniform1i(uniforms[USE_COLOR], 1);
+  glUniform1f(uniforms[ALPHA], alphaBlender);
+  glUniform4f(uniforms[COLOR], color.r, color.g, color.b, color.a);
+  
+  glDrawArrays(GL_TRIANGLE_FAN, 0, 18);
 }
