@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{e01d35b5-6f55-45e6-b3fc-274ad33b4350}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine">
+      <UniqueIdentifier>{333bad65-de1e-41ce-a449-f551cdf89ffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Win32">
+      <UniqueIdentifier>{4afb3083-c135-4599-98cf-fbe1a17d5cfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Core">
+      <UniqueIdentifier>{d2c7037c-afaf-4f6b-befa-ef33f219a3b5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\GameEngine\Application.cpp">
+      <Filter>GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameEngine\Device.cpp">
+      <Filter>GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameEngine\FileSystem.cpp">
+      <Filter>GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameEngine\Graphics2D.cpp">
+      <Filter>GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameEngine\Texture.cpp">
+      <Filter>GameEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Game\LogoState.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Game\MyGame.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameEngine\Win32\WinApplication.cpp">
+      <Filter>GameEngine\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameEngine\Win32\WinDevice.cpp">
+      <Filter>GameEngine\Win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\GameEngine\Texture.h">
+      <Filter>GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameEngine\Application.h">
+      <Filter>GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameEngine\Config.h">
+      <Filter>GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameEngine\Device.h">
+      <Filter>GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameEngine\FileSystem.h">
+      <Filter>GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameEngine\Graphics2D.h">
+      <Filter>GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameEngine\Singleton.h">
+      <Filter>GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameEngine\State.h">
+      <Filter>GameEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Game\LogoState.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Game\MyGame.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameEngine\Win32\WinDevice.h">
+      <Filter>GameEngine\Win32</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
