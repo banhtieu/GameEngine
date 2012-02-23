@@ -15,6 +15,11 @@ enum { ATTRIB_POSITION, ATTRIB_COLOR, ATTRIB_TEXCOORD };
 // All uniform here.
 enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, MATRIX, NUM_UNIFORMS};
 
+struct Frame2D
+{
+  int x, y, w, h;
+};
+
 class Graphics2D: public Singleton<Graphics2D>
 {
 public:
@@ -28,7 +33,7 @@ public:
   virtual void SetAlpha(float alpha){};
   
   virtual void FreeTexture(Texture *texture){};
-  
+  virtual void DrawTexture(Texture *texture, int dx, int dy, const Frame2D &frame);
   virtual void DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h);
   virtual void SetTransform(const Matrix33 &transform);
   virtual void ClearFrame();

@@ -9,19 +9,16 @@
 #ifndef GameEngine_BackgroundData_h
 #define GameEngine_BackgroundData_h
 
-struct Frame
-{
-  int x, y, w, h;
-};
+#include "Engine.h"
 
 enum 
 {
   CLOUD1, CLOUD2, BG1, BG2, FRONT1, FRONT2, NUM_FRAMES
 };
 
-Frame frameData[NUM_FRAMES] = {
-  776, 543, 495, 345,
-  776, 911, 496, 345,
+Frame2D bgFrameData[NUM_FRAMES] = {
+  776, 543, 493, 345,
+  776, 911, 493, 345,
   0, 0, 2040, 543,
   0, 538, 721, 543,
   0, 1316, 2048, 690,

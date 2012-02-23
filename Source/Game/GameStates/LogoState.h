@@ -19,6 +19,7 @@ public:
   virtual void Update();
 protected:
   Texture *logo;
+  Texture *background;
   int logoFrame;
 };
 
