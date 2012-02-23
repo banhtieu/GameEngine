@@ -262,7 +262,21 @@ void Graphics2D::DrawCirle(int x, int y, int r)
 
 void Graphics2D::FillRectange(int x, int y, int w, int h)
 {
+  float vertices[] = {x, y, x + w, y, x, y + h, x + w, y + h};
   
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
+  glEnableVertexAttribArray(ATTRIB_POSITION);
+  
+  glBindTexture(GL_TEXTURE_2D, 0);
+  
+  Matrix33 result = screen * transform;
+  
+  glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) result.value.m);
+  glUniform1i(uniforms[USE_COLOR], 1);
+  glUniform1f(uniforms[ALPHA], alphaBlender);
+  glUniform4f(uniforms[COLOR], color.r, color.g, color.b, color.a);
+  
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 }
 
 void Graphics2D::FillCircle(int x, int y, int r)
