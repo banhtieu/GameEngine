@@ -50,6 +50,7 @@ void LogoState::Render(Graphics2D *g)
     g->DrawTexture(background, i, 40, bgFrameData[FRONT1]);
     g->DrawTexture(background, i + bgFrameData[FRONT1].w, 0, bgFrameData[FRONT2]);
   }
+  g->SetAlpha(0.5f);
   
   g->DrawTexture(logo, 300, 500, 123*(logoFrame), 161, 123, 134);
   logoFrame = (logoFrame + 1) % 4;

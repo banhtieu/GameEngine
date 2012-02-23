@@ -13,13 +13,19 @@ uniform bool useColor;
 uniform bool useTexture;
 uniform sampler2D texture;
 uniform lowp float alphaBlender;
+uniform highp vec4 colorUniform;
 
 void main()
 {
-  lowp vec4 result = vec4(0.0, 0.0, 0.0, 0.0);
+  lowp vec4 result = colorVarying;
+  
+  if (useColor)
+  {
+    result = result + colorUniform;
+  }
   
   result = texture2D(texture, texcoordVarying);
-//  result = vec4(1.0, 0.0, 0.0, 1.0);
+  result.a = alphaBlender * result.a;
   
   gl_FragColor = result;
 }

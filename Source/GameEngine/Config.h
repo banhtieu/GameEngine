@@ -22,5 +22,7 @@
 
 #define LOGI(...) printf(__VA_ARGS__)
 #define LOGE(...) printf(__VA_ARGS__)
+#define SAFE_DEL(p) if(p) delete p; p = 0;
+#define SAFE_DEL_ARRAY(p) if(p) delete []p; p = 0;
 
 #endif

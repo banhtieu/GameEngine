@@ -9,6 +9,12 @@
 #ifndef GameEngine_Matrix_h
 #define GameEngine_Matrix_h
 
+// The Points.
+struct Point2
+{
+  float x, y;
+};
+
 // Typedef Union Matrix
 typedef union
 {

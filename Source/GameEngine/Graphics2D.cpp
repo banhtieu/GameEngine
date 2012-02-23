@@ -27,6 +27,7 @@ void Graphics2D::Init()
   
   // Init Screen Matrix
   screen =  Matrix33::TranslateMatrix(-1.0f, 1.0f) * Matrix33::ScaleMatrix(1.0f / SCREEN_WD2, - 1.0f / SCREEN_HD2) ;
+  alphaBlender = 1.0f;
   
   // load shader.
   FileSystem *fileSystem = FileSystem::GetInstance();
@@ -49,15 +50,16 @@ void Graphics2D::Init()
   
   uniforms[ALPHA] = glGetUniformLocation(programId, "alphaBlender");
   uniforms[TEXTURE] = glGetUniformLocation(programId, "texture");
-  uniforms[USE_TEXTURE] = glGetUniformLocation(programId, "useTexture");
   uniforms[USE_COLOR] = glGetUniformLocation(programId, "useColor");
+  uniforms[COLOR] = glGetUniformLocation(programId, "colorUniform");
   uniforms[MATRIX] = glGetUniformLocation(programId, "matrix");
+  
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
   
   PrintLog(programId);
   
-  LOGI("Link Shader OK %d", uniforms[MATRIX]);
+  LOGI("Link Shader OK %d\n%s", uniforms[MATRIX], vertexShaderSource);
   glUseProgram(programId);
   glUniform1i(uniforms[USE_TEXTURE], 1);
   glUniform1f(uniforms[ALPHA], 1.0f);
@@ -115,12 +117,23 @@ void Graphics2D::SetTexture(Texture *texture)
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, texture->width, texture->height, 0, GL_RGBA, GL_UNSIGNED_BYTE, texture->data);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    SAFE_DEL_ARRAY(texture->data);
   }
   
   glActiveTexture(GL_TEXTURE0);
   glBindTexture(GL_TEXTURE_2D, texture->textureId);
   glUniform1i(uniforms[TEXTURE], 0);
   
+}
+
+// Free this Texture
+void Graphics2D::FreeTexture(Texture *texture)
+{
+  if (texture->textureId)
+  {
+    glDeleteTextures(1, &texture->textureId);
+  }
+  SAFE_DEL_ARRAY(texture->data);
 }
 
 // Draw Texture With Frame
@@ -167,10 +180,17 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int
   Matrix33 result = screen * transform;
   
   glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) result.value.m);
+  glUniform1i(uniforms[USE_COLOR], 0);
+  glUniform1f(uniforms[ALPHA], alphaBlender);
   
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
   
-  
+}
+
+// Set ALpha to Draw
+void Graphics2D::SetAlpha(float alpha)
+{
+  alphaBlender = alpha;
 }
 
 // 
@@ -179,6 +199,7 @@ void Graphics2D::ClearFrame()
   glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT);
   SetTransform(Matrix33::Matrix33());
+  SetAlpha(1.0f);
 }
 
 // Set The Transform Matrix
