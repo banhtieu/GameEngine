@@ -77,6 +77,7 @@
 		3781E30014F5415D006E426E /* pngwtran.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pngwtran.c; sourceTree = "<group>"; };
 		3781E30114F5415D006E426E /* pngwutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pngwutil.c; sourceTree = "<group>"; };
 		3781E31114F5428F006E426E /* blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blood.png; path = ../../../Binary/blood.png; sourceTree = "<group>"; };
+		37D5EBE114F68D4400ECF83F /* BackgroundData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundData.h; path = ../../../Source/Game/BackgroundData.h; sourceTree = "<group>"; };
 		37F11B0B14F66FF700363E81 /* Matrix33.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix33.h; path = ../../../Source/GameEngine/Matrix33.h; sourceTree = "<group>"; };
 		37F11B0C14F6724200363E81 /* Matrix33.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix33.cpp; path = ../../../Source/GameEngine/Matrix33.cpp; sourceTree = "<group>"; };
 		37F11B0E14F6828F00363E81 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = ../../../Source/GameEngine/Engine.h; sourceTree = "<group>"; };
@@ -292,6 +293,7 @@
 				C364976014F68DE400E4630A /* GameStates */,
 				37F6F42B14F532C70028EDC4 /* MyGame.cpp */,
 				37F6F42C14F532C70028EDC4 /* MyGame.h */,
+				37D5EBE114F68D4400ECF83F /* BackgroundData.h */,
 			);
 			name = Game;
 			sourceTree = "<group>";
