@@ -21,12 +21,12 @@ public:
   int r, g, b, a;
   Color(float r_, float g_, float b_, float a_):r(r_), g(g_), b(b_), a(a_) {};
   Color():r(0.0f), g(0.0f), b(0.0f), a(0.0f) {};
-  Color(int code)
+  Color(unsigned int code)
   {
-    r = 0xff0000 && code / (float) 0xff0000;
-    g = 0xff00 && code / (float) 0xff00;
-    b = 0xff && code / (float) 0xff;
-    a = 0xff000000 && code / (float) 0xff000000;
+    r = (0xff0000 & code) / (float) 0xff0000;
+    g = (0xff00 & code) / (float) 0xff00;
+    b = (0xff & code) / (float) 0xff;
+    a = (0xff000000 & code) / (float) 0xff000000;
   };
 };
 
@@ -50,6 +50,15 @@ public:
   virtual void DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h);
   virtual void SetTransform(const Matrix33 &transform);
   virtual void ClearFrame();
+  
+  // Draw Basic Shape
+  virtual void SetColor(Color color);
+  virtual void DrawLine(int x1, int y1, int x2, int y2);
+  virtual void DrawRectangle(int x, int y, int w, int h);
+  virtual void DrawCirle(int x, int y, int r);
+  
+  virtual void FillRectange(int x, int y, int w, int h);
+  virtual void FillCircle(int x, int y, int r);
 protected:
   unsigned int programId;
   unsigned int uniforms[NUM_UNIFORMS];

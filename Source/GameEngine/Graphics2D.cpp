@@ -207,3 +207,65 @@ void Graphics2D::SetTransform(const Matrix33 &transform)
 {
   this->transform = transform;
 }
+
+// Draw Basic Shape - To Debug
+// Draw Basic Shape
+void Graphics2D::SetColor(Color color)
+{
+  this->color = color;
+}
+
+// Draw a Line
+void Graphics2D::DrawLine(int x1, int y1, int x2, int y2)
+{
+  float vertices[] = {x1, y1, x2, y2};
+  
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
+  glEnableVertexAttribArray(ATTRIB_POSITION);
+  
+  glBindTexture(GL_TEXTURE_2D, 0);
+  
+  Matrix33 result = screen * transform;
+  
+  glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) result.value.m);
+  glUniform1i(uniforms[USE_COLOR], 1);
+  glUniform1f(uniforms[ALPHA], alphaBlender);
+  glUniform4f(uniforms[COLOR], color.r, color.g, color.b, color.a);
+  
+  glDrawArrays(GL_LINES, 0, 2);
+  
+}
+
+void Graphics2D::DrawRectangle(int x, int y, int w, int h)
+{
+  float vertices[] = {x, y, x + w, y, x + w, y + h, x, y + h};
+  
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
+  glEnableVertexAttribArray(ATTRIB_POSITION);
+  
+  glBindTexture(GL_TEXTURE_2D, 0);
+  
+  Matrix33 result = screen * transform;
+  
+  glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) result.value.m);
+  glUniform1i(uniforms[USE_COLOR], 1);
+  glUniform1f(uniforms[ALPHA], alphaBlender);
+  glUniform4f(uniforms[COLOR], color.r, color.g, color.b, color.a);
+  
+  glDrawArrays(GL_LINE_LOOP, 0, 4);
+}
+
+void Graphics2D::DrawCirle(int x, int y, int r)
+{
+  
+}
+
+void Graphics2D::FillRectange(int x, int y, int w, int h)
+{
+  
+}
+
+void Graphics2D::FillCircle(int x, int y, int r)
+{
+  
+}
