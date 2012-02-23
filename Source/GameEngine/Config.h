@@ -18,6 +18,8 @@
 #define SCREEN_WD2 (SCREEN_W >> 1)
 #define SCREEN_HD2 (SCREEN_H >> 1)
 
+#define LIMIT_FPS 60
+
 #define LOGI(...) printf(__VA_ARGS__)
 #define LOGE(...) printf(__VA_ARGS__)
 

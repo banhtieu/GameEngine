@@ -10,10 +10,18 @@
 
 namespace bt
 {
+
+  Application::Application():currentState(0)
+  {
+  };
+
+  Application::~Application()
+  {
+    delete currentState;
+  }
   // Init the application.
   void Application::Init()
   {
-    isExit = false;
   };
   
   // Update the Application.
@@ -53,18 +61,6 @@ namespace bt
     
     currentState = newState;
     currentState->Init();
-  }
-  
-  // Check the Application is Still Run.
-  bool Application::Run()
-  {
-    return !isExit;
-  }
-  
-  // Exit The Application.
-  void Application::Exit()
-  {
-    isExit = true;
   }
   
 };

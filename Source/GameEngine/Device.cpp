@@ -17,4 +17,14 @@ namespace bt
     graphics2D = new Graphics2D();
     graphics2D->Init();
   }
+
+  bool Device::Run()
+  {
+    return !exit;
+  }
+
+  void Device::Exit()
+  {
+    exit = true;
+  }
 }

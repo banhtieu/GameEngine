@@ -9,10 +9,10 @@
 #include "Graphics2D.h"
 #include "FileSystem.h"
 
-#ifdef ANDROID_OS
+#if defined(ANDROID_OS) || defined(WIN32)
 
-#import <GLES2/gl2.h>
-#import <GLES2/glext.h>
+#include <GLES2/gl2.h>
+#include <GLES2/gl2ext.h>
 
 #else
 

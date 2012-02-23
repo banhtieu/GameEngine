@@ -19,12 +19,13 @@ namespace bt
   class Device: public Singleton<Device>
   {
   public:
+    Device():exit(0) {};
     virtual void Init();
-    virtual void OnPause() = 0;
-    virtual void OnResume() = 0;
-    virtual void Free() = 0;
-  private:
+    virtual bool Run();
+    virtual void Exit();
+  protected:
     Graphics2D *graphics2D;
+    bool exit;
   };
   
 };

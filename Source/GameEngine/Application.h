@@ -21,17 +21,15 @@ namespace bt
   class Application:public Singleton<Application>
   {
   public:
+    Application();
+    virtual ~Application();
     virtual void Init();
     virtual void Render();
     virtual void Update();
     virtual void Free();
     virtual void SwitchState(State *newState);
-    virtual void Exit();
-    virtual bool Run();
   protected:
     State *currentState;
-    bool isExit;
-    
   };
   
 };
