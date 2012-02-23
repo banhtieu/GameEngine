@@ -7,7 +7,6 @@
 //
 
 #include "LogoState.h"
-#include "Graphics2D.h"
 
 void LogoState::Init()
 {
@@ -15,10 +14,14 @@ void LogoState::Init()
   logoFrame = 0;
 }
 
-void LogoState::Render()
+void LogoState::Render(Graphics2D *g)
 {
-  Graphics2D *g = Graphics2D::GetInstance();
+  
   g->DrawTexture(logo, 20, 200, 0, 0, 512, 161);
+  static float alpha = 0.0f;
+  alpha += 1.0f;
+  
+  g->SetTransform(Matrix33::ScaleMatrix(2.0f, 300, 300));
   g->DrawTexture(logo, 300, 300, 123*(logoFrame/5), 161, 123, 134);
   logoFrame = (logoFrame + 1) % 20;
 };

@@ -9,15 +9,13 @@
 #ifndef GameEngine_LogoState_h
 #define GameEngine_LogoState_h
 
-#include "State.h"
-#include "Texture.h"
-
+#include "Engine.h"
 
 class LogoState: public State, Singleton<LogoState>
 {
 public:
   virtual void Init();
-  virtual void Render();
+  virtual void Render(Graphics2D *g);
   virtual void Update();
 protected:
   Texture *logo;

@@ -9,8 +9,6 @@
 #ifndef GameEngine_Texture_h
 #define GameEngine_Texture_h
 
-#include "Config.h"
-
 
 class Texture
 {

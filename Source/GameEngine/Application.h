@@ -9,11 +9,6 @@
 #ifndef GameEngine_BTApplication_h
 #define GameEngine_BTApplication_h
 
-#include "Config.h"
-#include "Singleton.h"
-#include "State.h"
-
-
 class Application:public Singleton<Application>
 {
 public:

@@ -23,6 +23,4 @@
 #define LOGI(...) printf(__VA_ARGS__)
 #define LOGE(...) printf(__VA_ARGS__)
 
-#include "Singleton.h"
-
 #endif

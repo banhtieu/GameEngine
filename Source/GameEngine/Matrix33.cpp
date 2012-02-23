@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#include "Matrix33.h"
+#include "Engine.h"
 #include <math.h>
 
 // Matrix Creator
@@ -64,9 +64,22 @@ Matrix33 Matrix33::ScaleMatrix(float sx, float sy)
   return Matrix33(sx, 0.0f, 0.0f, sy);
 }
 
+// Return a ScaleMatrix
+Matrix33 Matrix33::ScaleMatrix(float sx, float x, float y)
+{
+  return TranslateMatrix(x, y) * ScaleMatrix(sx, sx) * TranslateMatrix(-x, -y);
+}
+
+// Return a Rotate Matrix
+Matrix33 Matrix33::RotateMatrix(float alpha, float x, float y)
+{
+  return TranslateMatrix(x, y) * RotateMatrix(alpha) * TranslateMatrix(-x, -y);
+}
+
 // Return a Rotate Matrix
 Matrix33 Matrix33::RotateMatrix(float alpha)
 {
+  alpha *= M_PI / 180.0f;
   return Matrix33(cos(alpha), -sin(alpha), sin(alpha), cos(alpha));
 }
 

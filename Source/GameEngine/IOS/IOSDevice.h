@@ -9,7 +9,7 @@
 #ifndef GameEngine_iOSDevice_h
 #define GameEngine_iOSDevice_h
 
-#include "Device.h"
+#include "Engine.h"
 
 class IOSDevice: public Device
 {

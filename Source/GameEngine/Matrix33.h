@@ -30,7 +30,9 @@ public:
   Matrix33(float a1, float a2, float a3, float b1, float b2, float b3, float c1, float c2, float c3);
   static Matrix33 TranslateMatrix(float dx, float dy);
   static Matrix33 ScaleMatrix(float sx, float sy);
+  static Matrix33 ScaleMatrix(float sx, float x, float y);
   static Matrix33 RotateMatrix(float alpha);
+  static Matrix33 RotateMatrix(float alpha, float x, float y);
   Matrix33 operator*(const Matrix33 &matrix);
 };
 

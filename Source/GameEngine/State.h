@@ -9,15 +9,13 @@
 #ifndef GameEngine_State_h
 #define GameEngine_State_h
 
-#include "Config.h"
-
 // The game state 
 class State
 {
 public:
   virtual void Init(){};
   virtual void Update(){};
-  virtual void Render(){};
+  virtual void Render(Graphics2D *g){};
   virtual void Free(){};
 };
 

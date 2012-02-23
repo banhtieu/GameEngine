@@ -9,7 +9,6 @@
 #ifndef GameEngine_BTSingleton_h
 #define GameEngine_BTSingleton_h
 
-#include "Config.h"
 
 // The Singleton Template For The Game ENgine.
 template <class T>

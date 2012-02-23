@@ -6,8 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#include "Graphics2D.h"
-#include "FileSystem.h"
+#include "Engine.h"
 
 #if defined(ANDROID_OS) || defined(WIN32)
 
@@ -128,9 +127,6 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int
 {
   SetTexture(texture);
   
-  float sx = 2.0f / SCREEN_W;
-  float sy = 2.0f / SCREEN_H;
-  
   float vertices[] = {
     dx, 
     dy,
@@ -142,8 +138,8 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int
     dy + h
   };
   
-  sx = 1.0f / texture->width;
-  sy = 1.0f / texture->height;
+  float sx = 1.0f / texture->width;
+  float sy = 1.0f / texture->height;
   
   float texcoord[] = {
     sx * x, 
@@ -162,7 +158,25 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int
   glVertexAttribPointer(ATTRIB_TEXCOORD, 2, GL_FLOAT, GL_FALSE, 0, texcoord);
   glEnableVertexAttribArray(ATTRIB_TEXCOORD);
   
+  Matrix33 result = screen * transform;
+  
+  glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) result.value.m);
+  
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
   
   
+}
+
+// 
+void Graphics2D::ClearFrame()
+{
+  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+  glClear(GL_COLOR_BUFFER_BIT);
+  SetTransform(Matrix33::Matrix33());
+}
+
+// Set The Transform Matrix
+void Graphics2D::SetTransform(const Matrix33 &transform)
+{
+  this->transform = transform;
 }

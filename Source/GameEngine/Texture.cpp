@@ -6,9 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#include "Texture.h"
-#include "Graphics2D.h"
-#include "FileSystem.h"
+#include "Engine.h"
 #include "png.h"
 
 // Constructor .

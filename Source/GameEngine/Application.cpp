@@ -6,8 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#include "Application.h"
-
+#include "Engine.h"
 
 Application::Application():currentState(0)
 {
@@ -34,9 +33,12 @@ void Application::Update()
 // Render this Application.
 void Application::Render()
 {
+  Graphics2D *g = Graphics2D::GetInstance();
+  g->ClearFrame();
+  
   if (currentState)
   {
-    currentState->Render();
+    currentState->Render(g);
   }
 };
 

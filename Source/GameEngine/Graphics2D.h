@@ -9,12 +9,6 @@
 #ifndef GameEngine_Graphics2D_h
 #define GameEngine_Graphics2D_h
 
-#include "Config.h"
-#include "Singleton.h"
-#include "Texture.h"
-#include "Matrix33.h"
-
-
 // All attribute here...
 enum { ATTRIB_POSITION, ATTRIB_COLOR, ATTRIB_TEXCOORD };
 
@@ -36,6 +30,8 @@ public:
   virtual void FreeTexture(Texture *texture){};
   
   virtual void DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h);
+  virtual void SetTransform(const Matrix33 &transform);
+  virtual void ClearFrame();
 protected:
   unsigned int programId;
   unsigned int uniforms[NUM_UNIFORMS];

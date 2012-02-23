@@ -10,7 +10,6 @@
 #define GameEngine_FileSystem_h
 
 #include <stdio.h>
-#include "Singleton.h"
 
 class FileSystem: public Singleton<FileSystem>
 {

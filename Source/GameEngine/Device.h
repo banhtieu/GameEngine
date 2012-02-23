@@ -9,10 +9,6 @@
 #ifndef GameEngine_Device_h
 #define GameEngine_Device_h
 
-#include "Config.h"
-#include "Singleton.h"
-#include "Graphics2D.h"
-
 // Name space BT;
 
 class Device: public Singleton<Device>
