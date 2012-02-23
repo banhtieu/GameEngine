@@ -25,6 +25,10 @@
 // Init Graphics...
 void Graphics2D::Init()
 {
+  
+  // Init Screen Matrix
+  screen =  Matrix33::TranslateMatrix(-1.0f, 1.0f) * Matrix33::ScaleMatrix(1.0f / SCREEN_WD2, - 1.0f / SCREEN_HD2) ;
+  
   // load shader.
   FileSystem *fileSystem = FileSystem::GetInstance();
   
@@ -48,16 +52,17 @@ void Graphics2D::Init()
   uniforms[TEXTURE] = glGetUniformLocation(programId, "texture");
   uniforms[USE_TEXTURE] = glGetUniformLocation(programId, "useTexture");
   uniforms[USE_COLOR] = glGetUniformLocation(programId, "useColor");
-  
+  uniforms[MATRIX] = glGetUniformLocation(programId, "matrix");
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
   
   PrintLog(programId);
   
-  LOGI("Link Shader OK");
+  LOGI("Link Shader OK %d", uniforms[MATRIX]);
   glUseProgram(programId);
   glUniform1i(uniforms[USE_TEXTURE], 1);
   glUniform1f(uniforms[ALPHA], 1.0f);
+  glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) screen.value.m);
   
   delete vertexShaderSource;
   delete fragmentShaderSource;
@@ -127,14 +132,14 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int
   float sy = 2.0f / SCREEN_H;
   
   float vertices[] = {
-    sx * (dx - SCREEN_WD2), 
-    sy * (SCREEN_HD2 - dy),
-    sx * (dx + w - SCREEN_WD2),
-    sy * (SCREEN_HD2 - dy),
-    sx * (dx - SCREEN_WD2),
-    sy * (SCREEN_HD2 - dy - h),
-    sx * (dx + w - SCREEN_WD2),
-    sy * (SCREEN_HD2 - dy - h)
+    dx, 
+    dy,
+    dx + w,
+    dy,
+    dx,
+    dy + h,
+    dx + w,
+    dy + h
   };
   
   sx = 1.0f / texture->width;

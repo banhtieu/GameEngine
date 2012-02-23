@@ -27,6 +27,7 @@
 		3781E30F14F5415D006E426E /* pngwtran.c in Sources */ = {isa = PBXBuildFile; fileRef = 3781E30014F5415D006E426E /* pngwtran.c */; };
 		3781E31014F5415D006E426E /* pngwutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 3781E30114F5415D006E426E /* pngwutil.c */; };
 		3781E31214F5428F006E426E /* blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 3781E31114F5428F006E426E /* blood.png */; };
+		37F11B0D14F6724200363E81 /* Matrix33.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F11B0C14F6724200363E81 /* Matrix33.cpp */; };
 		37F6F3EC14F530B00028EDC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3EB14F530B00028EDC4 /* UIKit.framework */; };
 		37F6F3EE14F530B00028EDC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3ED14F530B00028EDC4 /* Foundation.framework */; };
 		37F6F3F014F530B00028EDC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3EF14F530B00028EDC4 /* CoreGraphics.framework */; };
@@ -76,6 +77,8 @@
 		3781E30014F5415D006E426E /* pngwtran.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pngwtran.c; sourceTree = "<group>"; };
 		3781E30114F5415D006E426E /* pngwutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pngwutil.c; sourceTree = "<group>"; };
 		3781E31114F5428F006E426E /* blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blood.png; path = ../../../Binary/blood.png; sourceTree = "<group>"; };
+		37F11B0B14F66FF700363E81 /* Matrix33.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix33.h; path = ../../../Source/GameEngine/Matrix33.h; sourceTree = "<group>"; };
+		37F11B0C14F6724200363E81 /* Matrix33.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix33.cpp; path = ../../../Source/GameEngine/Matrix33.cpp; sourceTree = "<group>"; };
 		37F6F3E714F530B00028EDC4 /* GameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F6F3EB14F530B00028EDC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37F6F3ED14F530B00028EDC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -158,6 +161,36 @@
 			);
 			name = LIBPNG;
 			path = ../../Library/LIBPNG;
+			sourceTree = "<group>";
+		};
+		37F11B0714F66FB400363E81 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				37F11B0914F66FC600363E81 /* Math */,
+				37F6F42F14F532DC0028EDC4 /* Application.cpp */,
+				37F6F43014F532DC0028EDC4 /* Application.h */,
+				37F6F43114F532DC0028EDC4 /* Config.h */,
+				37F6F43214F532DC0028EDC4 /* Device.cpp */,
+				37F6F43314F532DC0028EDC4 /* Device.h */,
+				37F6F43414F532DC0028EDC4 /* FileSystem.cpp */,
+				37F6F43514F532DC0028EDC4 /* FileSystem.h */,
+				37F6F43614F532DC0028EDC4 /* Graphics2D.cpp */,
+				37F6F43714F532DC0028EDC4 /* Graphics2D.h */,
+				37F6F44014F532DC0028EDC4 /* Singleton.h */,
+				37F6F44114F532DC0028EDC4 /* State.h */,
+				37F6F44214F532DC0028EDC4 /* Texture.cpp */,
+				37F6F44314F532DC0028EDC4 /* Texture.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		37F11B0914F66FC600363E81 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				37F11B0B14F66FF700363E81 /* Matrix33.h */,
+				37F11B0C14F6724200363E81 /* Matrix33.cpp */,
+			);
+			name = Math;
 			sourceTree = "<group>";
 		};
 		37F6F3DC14F530B00028EDC4 = {
@@ -245,20 +278,8 @@
 		37F6F42714F532AE0028EDC4 /* GameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				37F11B0714F66FB400363E81 /* Core */,
 				37F6F43814F532DC0028EDC4 /* IOS */,
-				37F6F42F14F532DC0028EDC4 /* Application.cpp */,
-				37F6F43014F532DC0028EDC4 /* Application.h */,
-				37F6F43114F532DC0028EDC4 /* Config.h */,
-				37F6F43214F532DC0028EDC4 /* Device.cpp */,
-				37F6F43314F532DC0028EDC4 /* Device.h */,
-				37F6F43414F532DC0028EDC4 /* FileSystem.cpp */,
-				37F6F43514F532DC0028EDC4 /* FileSystem.h */,
-				37F6F43614F532DC0028EDC4 /* Graphics2D.cpp */,
-				37F6F43714F532DC0028EDC4 /* Graphics2D.h */,
-				37F6F44014F532DC0028EDC4 /* Singleton.h */,
-				37F6F44114F532DC0028EDC4 /* State.h */,
-				37F6F44214F532DC0028EDC4 /* Texture.cpp */,
-				37F6F44314F532DC0028EDC4 /* Texture.h */,
 			);
 			name = GameEngine;
 			sourceTree = "<group>";
@@ -381,6 +402,7 @@
 				3781E30E14F5415D006E426E /* pngwrite.c in Sources */,
 				3781E30F14F5415D006E426E /* pngwtran.c in Sources */,
 				3781E31014F5415D006E426E /* pngwutil.c in Sources */,
+				37F11B0D14F6724200363E81 /* Matrix33.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

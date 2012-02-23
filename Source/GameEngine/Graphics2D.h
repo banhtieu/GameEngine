@@ -12,13 +12,14 @@
 #include "Config.h"
 #include "Singleton.h"
 #include "Texture.h"
+#include "Matrix33.h"
 
 
 // All attribute here...
 enum { ATTRIB_POSITION, ATTRIB_COLOR, ATTRIB_TEXCOORD };
 
 // All uniform here.
-enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, NUM_UNIFORMS};
+enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, MATRIX, NUM_UNIFORMS};
 
 class Graphics2D: public Singleton<Graphics2D>
 {
@@ -38,6 +39,8 @@ public:
 protected:
   unsigned int programId;
   unsigned int uniforms[NUM_UNIFORMS];
+  Matrix33 transform;
+  Matrix33 screen;
 };
 
 

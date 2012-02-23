@@ -12,10 +12,12 @@ attribute vec2 texcoord;
 
 varying lowp vec4 colorVarying;
 varying lowp vec2 texcoordVarying;
+uniform mat3 matrix;
 
 void main()
-{    
-    gl_Position = vec4(position, 0.0, 1.0);
-    colorVarying = color;
-    texcoordVarying = texcoord;
+{   
+  vec3 pos = matrix * vec3(position, 1.0);
+  gl_Position = vec4(pos.xy, 0.0, 1.0);
+  colorVarying = color;
+  texcoordVarying = texcoord;
 }
