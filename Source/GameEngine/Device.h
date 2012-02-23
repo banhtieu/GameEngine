@@ -14,21 +14,19 @@
 #include "Graphics2D.h"
 
 // Name space BT;
-namespace bt
-{
-  class Device: public Singleton<Device>
-  {
-  public:
-    Device():exit(0) {};
-    virtual void Init();
-    virtual bool Run();
-    virtual void Exit();
-  protected:
-    Graphics2D *graphics2D;
-    bool exit;
-  };
-  
-};
 
+class Device: public Singleton<Device>
+{
+public:
+  Device():exit(0) {};
+  ~Device();
+  virtual void Init();
+  virtual bool Run();
+  virtual void Exit();
+  virtual void Free();
+protected:
+  Graphics2D *graphics2D;
+  bool exit;
+};
 
 #endif

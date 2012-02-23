@@ -12,20 +12,17 @@
 #include <stdio.h>
 #include "Singleton.h"
 
-namespace bt
+class FileSystem: public Singleton<FileSystem>
 {
-  class FileSystem: public Singleton<FileSystem>
-  {
-  public:
-    FileSystem(const char *documentP, const char *resourceP);
-    virtual ~FileSystem(); 
-    virtual char *GetResourceContent(const char *filename);
-    virtual FILE *OpenResource(const char *filename, const char *mode);
-    virtual FILE *OpenDocument(const char *filename, const char *mode);
-  protected:
-    char *documentPath;
-    char *resourcePath;
-  };
+public:
+  FileSystem(const char *documentP, const char *resourceP);
+  virtual ~FileSystem(); 
+  virtual char *GetResourceContent(const char *filename);
+  virtual FILE *OpenResource(const char *filename, const char *mode);
+  virtual FILE *OpenDocument(const char *filename, const char *mode);
+protected:
+  char *documentPath;
+  char *resourcePath;
 };
 
 #endif

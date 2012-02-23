@@ -11,26 +11,21 @@
 
 #include "Config.h"
 
-// Namespace BT.
-namespace bt
+
+class Texture
 {
   
-  class Texture
-  {
-    
-  public:
-    unsigned int width;
-    unsigned int height;
-    unsigned int textureId;
-    unsigned int nChannels;
-    char *data;
-    
-    Texture();
-    virtual ~Texture();
-    
-    static Texture* LoadTexturePNG(const char *filename);
-  };
+public:
+  unsigned int width;
+  unsigned int height;
+  unsigned int textureId;
+  unsigned int nChannels;
+  char *data;
   
+  Texture();
+  virtual ~Texture();
+  
+  static Texture* LoadTexturePNG(const char *filename);
 };
 
 

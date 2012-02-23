@@ -12,7 +12,6 @@
 #import "IOSDevice.h"
 #import "FileSystem.h"
 
-using namespace bt;
 
 @interface ViewController () 
 
@@ -114,8 +113,7 @@ FileSystem *fileSystem;
 {
   [EAGLContext setCurrentContext:self.context];
   application->Free();
-  device->Free();
-  
+  device->Free();  
 }
 
 #pragma mark - GLKView and GLKViewController delegate methods

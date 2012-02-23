@@ -12,9 +12,8 @@
 #include "State.h"
 #include "Texture.h"
 
-using namespace bt;
 
-class LogoState: public bt::state::State, bt::Singleton<LogoState>
+class LogoState: public State, Singleton<LogoState>
 {
 public:
   virtual void Init();

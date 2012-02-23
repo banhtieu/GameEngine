@@ -11,21 +11,14 @@
 
 #include "Config.h"
 
-namespace bt
+// The game state 
+class State
 {
-  
-  namespace state
-  {
-    // The game state 
-    class State
-    {
-    public:
-      virtual void Init(){};
-      virtual void Update(){};
-      virtual void Render(){};
-      virtual void Free(){};
-    };
-  }
+public:
+  virtual void Init(){};
+  virtual void Update(){};
+  virtual void Render(){};
+  virtual void Free(){};
 };
 
 #endif

@@ -9,70 +9,67 @@
 #include "FileSystem.h"
 #include <string.h>
 
-namespace bt
+
+FileSystem::FileSystem(const char *document, const char *resource)
 {
+  documentPath = new char[strlen(document) + 1];
+  resourcePath = new char[strlen(resource) + 1];
+  strcpy(documentPath, document);
+  strcpy(resourcePath, resource);
+}
+
+FileSystem::~FileSystem()
+{
+  delete documentPath;
+  delete resourcePath;
+}
+
+// Open a file from Resource Folder.
+FILE *FileSystem::OpenResource(const char *filename, const char *mode)
+{
+  char realPath[255];
+  sprintf(realPath, "%s/%s", resourcePath, filename);
+  return fopen(realPath, mode);
+}
+
+// Open a file from Document Folder.
+FILE *FileSystem::OpenDocument(const char *filename, const char *mode)
+{
+  char realPath[255];
+  sprintf(realPath, "%s/%s", documentPath, filename);
+  return fopen(realPath, mode);
+}
+
+// Get Resource Content as a String...
+char * FileSystem::GetResourceContent(const char *filename)
+{
+  FILE *fp = OpenResource(filename, "rb");
+  int size = 0;
+  char *result = NULL;
   
-  FileSystem::FileSystem(const char *document, const char *resource)
+  if (fp)
   {
-    documentPath = new char[strlen(document) + 1];
-    resourcePath = new char[strlen(resource) + 1];
-    strcpy(documentPath, document);
-    strcpy(resourcePath, resource);
-  }
-  
-  FileSystem::~FileSystem()
-  {
-    delete documentPath;
-    delete resourcePath;
-  }
-  
-  // Open a file from Resource Folder.
-  FILE *FileSystem::OpenResource(const char *filename, const char *mode)
-  {
-    char realPath[255];
-    sprintf(realPath, "%s/%s", resourcePath, filename);
-    return fopen(realPath, mode);
-  }
-  
-  // Open a file from Document Folder.
-  FILE *FileSystem::OpenDocument(const char *filename, const char *mode)
-  {
-    char realPath[255];
-    sprintf(realPath, "%s/%s", documentPath, filename);
-    return fopen(realPath, mode);
-  }
-  
-  // Get Resource Content as a String...
-  char * FileSystem::GetResourceContent(const char *filename)
-  {
-    FILE *fp = OpenResource(filename, "rb");
-    int size = 0;
-    char *result = NULL;
+    fseek(fp, 0, SEEK_END);
+    size = ftell(fp);
     
-    if (fp)
+    fseek(fp, 0, SEEK_SET);
+    
+    if (size)
     {
-      fseek(fp, 0, SEEK_END);
-      size = ftell(fp);
+      result = new char[size + 1];
       
-      fseek(fp, 0, SEEK_SET);
-      
-      if (size)
-      {
-        result = new char[size + 1];
-        
-        fread(result, size, sizeof(char), fp);
-        result[size] = 0;
-      }
-      else
-      {
-        LOGE("File %s is Empty!!\n", filename);
-      }
+      fread(result, size, sizeof(char), fp);
+      result[size] = 0;
     }
     else
     {
-      LOGE("Cannot Open File %s\n", filename);
+      LOGE("File %s is Empty!!\n", filename);
     }
-    
-    return result;
   }
+  else
+  {
+    LOGE("Cannot Open File %s\n", filename);
+  }
+  
+  return result;
 }

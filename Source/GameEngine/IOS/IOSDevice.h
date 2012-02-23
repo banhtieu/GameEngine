@@ -11,19 +11,13 @@
 
 #include "Device.h"
 
-namespace bt
+class IOSDevice: public Device
 {
-  
-  class IOSDevice: public Device
-  {
-  public:
-    virtual void Init();
-    virtual void OnPause();
-    virtual void OnResume();
-    virtual void Free();
-  };
-  
-  
+public:
+  virtual void Init();
+  virtual void OnPause();
+  virtual void OnResume();
+  virtual void Free();
 };
 
 #endif

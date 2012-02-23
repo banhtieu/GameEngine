@@ -11,7 +11,7 @@
 
 #include "Application.h"
 
-class MyGame:public bt::Application
+class MyGame:public Application
 {
 public:
   virtual void Init();

@@ -8,7 +8,6 @@
 
 #include "LogoState.h"
 #include "Graphics2D.h"
-using namespace bt;
 
 void LogoState::Init()
 {

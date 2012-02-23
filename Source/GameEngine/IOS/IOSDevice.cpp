@@ -8,9 +8,6 @@
 
 #include "IOSDevice.h"
 
-namespace bt
-{
-
 // Init the engine
 // Load Graphics 
 void IOSDevice::Init() 
@@ -30,5 +27,3 @@ void IOSDevice::OnResume()
 void IOSDevice::Free()
 {
 }
-  
-};

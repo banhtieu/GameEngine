@@ -7,24 +7,30 @@
 //
 
 #include "Device.h"
-
-namespace bt
-{
   
-  // Init This Device..
-  void Device::Init()
-  {
-    graphics2D = new Graphics2D();
-    graphics2D->Init();
-  }
+// Free The Device
+Device::~Device()
+{
+}
 
-  bool Device::Run()
-  {
-    return !exit;
-  }
+void Device::Free()
+{
+  Graphics2D::FreeInstance();
+}
 
-  void Device::Exit()
-  {
-    exit = true;
-  }
+// Init This Device..
+void Device::Init()
+{
+  graphics2D = new Graphics2D();
+  graphics2D->Init();
+}
+
+bool Device::Run()
+{
+  return !exit;
+}
+
+void Device::Exit()
+{
+  exit = true;
 }

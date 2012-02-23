@@ -14,33 +14,30 @@
 #include "Texture.h"
 
 
-namespace bt
+// All attribute here...
+enum { ATTRIB_POSITION, ATTRIB_COLOR, ATTRIB_TEXCOORD };
+
+// All uniform here.
+enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, NUM_UNIFORMS};
+
+class Graphics2D: public Singleton<Graphics2D>
 {
-  // All attribute here...
-  enum { ATTRIB_POSITION, ATTRIB_COLOR, ATTRIB_TEXCOORD };
+public:
+  virtual void Init();
+  virtual unsigned int LoadShader(const char *shaderSource, int shaderType);
+  virtual void PrintLog(unsigned int objectId);
   
-  // All uniform here.
-  enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, NUM_UNIFORMS};
+  virtual void SetUseColor(bool useColor){};
+  virtual void SetUseTexture(bool useTexture){};
+  virtual void SetTexture(Texture *texture);
+  virtual void SetAlpha(float alpha){};
   
-  class Graphics2D: public Singleton<Graphics2D>
-  {
-  public:
-    virtual void Init();
-    virtual unsigned int LoadShader(const char *shaderSource, int shaderType);
-    virtual void PrintLog(unsigned int objectId);
-    
-    virtual void SetUseColor(bool useColor){};
-    virtual void SetUseTexture(bool useTexture){};
-    virtual void SetTexture(Texture *texture);
-    virtual void SetAlpha(float alpha){};
-    
-    virtual void FreeTexture(Texture *texture){};
-    
-    virtual void DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h);
-  protected:
-    unsigned int programId;
-    unsigned int uniforms[NUM_UNIFORMS];
-  };
+  virtual void FreeTexture(Texture *texture){};
+  
+  virtual void DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h);
+protected:
+  unsigned int programId;
+  unsigned int uniforms[NUM_UNIFORMS];
 };
 
 

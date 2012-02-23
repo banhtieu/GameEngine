@@ -13,25 +13,19 @@
 #include "Singleton.h"
 #include "State.h"
 
-namespace bt
+
+class Application:public Singleton<Application>
 {
-  
-  using namespace state;
-  
-  class Application:public Singleton<Application>
-  {
-  public:
-    Application();
-    virtual ~Application();
-    virtual void Init();
-    virtual void Render();
-    virtual void Update();
-    virtual void Free();
-    virtual void SwitchState(State *newState);
-  protected:
-    State *currentState;
-  };
-  
+public:
+  Application();
+  virtual ~Application();
+  virtual void Init();
+  virtual void Render();
+  virtual void Update();
+  virtual void Free();
+  virtual void SwitchState(State *newState);
+protected:
+  State *currentState;
 };
 
 #endif
