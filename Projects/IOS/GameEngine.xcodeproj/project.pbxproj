@@ -47,6 +47,7 @@
 		37F6F44A14F532DC0028EDC4 /* IOSDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F43D14F532DC0028EDC4 /* IOSDevice.cpp */; };
 		37F6F44C14F532DC0028EDC4 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F44214F532DC0028EDC4 /* Texture.cpp */; };
 		C364976414F68E2200E4630A /* LogoState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C364976214F68E2200E4630A /* LogoState.cpp */; };
+		C3C8297D14F690790001CC65 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3C8297C14F690790001CC65 /* MainMenuState.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,10 @@
 		37F6F44314F532DC0028EDC4 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = ../../../Source/GameEngine/Texture.h; sourceTree = "<group>"; };
 		C364976214F68E2200E4630A /* LogoState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogoState.cpp; sourceTree = "<group>"; };
 		C364976314F68E2200E4630A /* LogoState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoState.h; sourceTree = "<group>"; };
+		C3C8297C14F690790001CC65 /* MainMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuState.cpp; sourceTree = "<group>"; };
+		C3C8297F14F690970001CC65 /* MainMenuState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuState.h; sourceTree = "<group>"; };
+		C3C8298014F691E30001CC65 /* LoadingState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LoadingState.cpp; sourceTree = "<group>"; };
+		C3C8298114F691E30001CC65 /* LoadingState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingState.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +322,10 @@
 			children = (
 				C364976214F68E2200E4630A /* LogoState.cpp */,
 				C364976314F68E2200E4630A /* LogoState.h */,
+				C3C8298014F691E30001CC65 /* LoadingState.cpp */,
+				C3C8298114F691E30001CC65 /* LoadingState.h */,
+				C3C8297C14F690790001CC65 /* MainMenuState.cpp */,
+				C3C8297F14F690970001CC65 /* MainMenuState.h */,
 			);
 			name = GameStates;
 			path = ../../../Source/Game/GameStates;
@@ -416,6 +425,7 @@
 				3781E31014F5415D006E426E /* pngwutil.c in Sources */,
 				37F11B0D14F6724200363E81 /* Matrix33.cpp in Sources */,
 				C364976414F68E2200E4630A /* LogoState.cpp in Sources */,
+				C3C8297D14F690790001CC65 /* MainMenuState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
