@@ -3,17 +3,16 @@
 #include <stdio.h>
 #include "WinDevice.h"
 #include "MyGame.h"
-#include "FileSystem.h"
 
-bt::Application *app;
-bt::Device *device;
-bt::FileSystem *fileSystem;
+Application *app;
+Device *device;
+FileSystem *fileSystem;
 
 int main()
 {
-  device = new bt::WinDevice();
+  device = new WinDevice();
   app = new MyGame();
-  fileSystem = new bt::FileSystem(".", ".");
+  fileSystem = new FileSystem(".", ".");
   device->Init();
   app->Init();
 

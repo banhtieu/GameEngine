@@ -51,8 +51,9 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\Library\LIBGLES2;..\..\Library\LIBPNG;..\..\Source\GameEngine;..\..\Source\Game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_USE_MATH_DEFINES;%(PreprocessorDefinitions);_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\Library\LIBGLES2;..\..\Library\LIBPNG;..\..\Source\GameEngine;..\..\Source\Game\GameStates;..\..\Source\Game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -69,8 +70,9 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\Library\LIBGLES2;..\..\Library\LIBPNG;..\..\Source\GameEngine;..\..\Source\Game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\Library\LIBGLES2;..\..\Library\LIBPNG;..\..\Source\GameEngine;..\..\Source\Game\States;..\..\Source\Game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -86,10 +88,13 @@
     <ClCompile Include="..\..\Source\GameEngine\Device.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\FileSystem.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\Graphics2D.cpp" />
+    <ClCompile Include="..\..\Source\GameEngine\Matrix33.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\Texture.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\Win32\WinApplication.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\Win32\WinDevice.cpp" />
-    <ClCompile Include="..\..\Source\Game\LogoState.cpp" />
+    <ClCompile Include="..\..\Source\Game\GameStates\LoadingState.cpp" />
+    <ClCompile Include="..\..\Source\Game\GameStates\LogoState.cpp" />
+    <ClCompile Include="..\..\Source\Game\GameStates\MainMenuState.cpp" />
     <ClCompile Include="..\..\Source\Game\MyGame.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -98,11 +103,14 @@
     <ClInclude Include="..\..\Source\GameEngine\Device.h" />
     <ClInclude Include="..\..\Source\GameEngine\FileSystem.h" />
     <ClInclude Include="..\..\Source\GameEngine\Graphics2D.h" />
+    <ClInclude Include="..\..\Source\GameEngine\Matrix33.h" />
     <ClInclude Include="..\..\Source\GameEngine\Singleton.h" />
     <ClInclude Include="..\..\Source\GameEngine\State.h" />
     <ClInclude Include="..\..\Source\GameEngine\Texture.h" />
     <ClInclude Include="..\..\Source\GameEngine\Win32\WinDevice.h" />
-    <ClInclude Include="..\..\Source\Game\LogoState.h" />
+    <ClInclude Include="..\..\Source\Game\GameStates\LoadingState.h" />
+    <ClInclude Include="..\..\Source\Game\GameStates\LogoState.h" />
+    <ClInclude Include="..\..\Source\Game\GameStates\MainMenuState.h" />
     <ClInclude Include="..\..\Source\Game\MyGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

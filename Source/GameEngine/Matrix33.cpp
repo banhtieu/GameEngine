@@ -79,7 +79,7 @@ Matrix33 Matrix33::RotateMatrix(float alpha, float x, float y)
 // Return a Rotate Matrix
 Matrix33 Matrix33::RotateMatrix(float alpha)
 {
-  alpha *= M_PI / 180.0f;
+  alpha *= (float) M_PI / 180.0f;
   return Matrix33(cos(alpha), -sin(alpha), sin(alpha), cos(alpha));
 }
 

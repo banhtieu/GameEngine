@@ -18,7 +18,7 @@ enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, MATRIX, COLOR, NUM_UNIFORMS};
 class Color
 {
 public:
-  int r, g, b, a;
+  float r, g, b, a;
   Color(float r_, float g_, float b_, float a_):r(r_), g(g_), b(b_), a(a_) {};
   Color():r(0.0f), g(0.0f), b(0.0f), a(0.0f) {};
   Color(unsigned int code)

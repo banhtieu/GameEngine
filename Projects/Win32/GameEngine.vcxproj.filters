@@ -13,6 +13,12 @@
     <Filter Include="GameEngine\Core">
       <UniqueIdentifier>{d2c7037c-afaf-4f6b-befa-ef33f219a3b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameStates">
+      <UniqueIdentifier>{f153fe67-075e-45c3-bdb6-351697768bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Core\Math">
+      <UniqueIdentifier>{bd86c28c-3598-4099-a46b-2822ed2050e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GameEngine\Application.cpp">
@@ -30,9 +36,6 @@
     <ClCompile Include="..\..\Source\GameEngine\Texture.cpp">
       <Filter>GameEngine\Core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Game\LogoState.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Game\MyGame.cpp">
       <Filter>Game</Filter>
     </ClCompile>
@@ -41,6 +44,18 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\GameEngine\Win32\WinDevice.cpp">
       <Filter>GameEngine\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Game\GameStates\LoadingState.cpp">
+      <Filter>Game\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Game\GameStates\LogoState.cpp">
+      <Filter>Game\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Game\GameStates\MainMenuState.cpp">
+      <Filter>Game\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameEngine\Matrix33.cpp">
+      <Filter>GameEngine\Core\Math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,14 +83,23 @@
     <ClInclude Include="..\..\Source\GameEngine\State.h">
       <Filter>GameEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LogoState.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\Game\MyGame.h">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GameEngine\Win32\WinDevice.h">
       <Filter>GameEngine\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Game\GameStates\LoadingState.h">
+      <Filter>Game\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Game\GameStates\LogoState.h">
+      <Filter>Game\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Game\GameStates\MainMenuState.h">
+      <Filter>Game\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameEngine\Matrix33.h">
+      <Filter>GameEngine\Core\Math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
