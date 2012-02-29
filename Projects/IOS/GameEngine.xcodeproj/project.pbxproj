@@ -28,7 +28,6 @@
 		3781E31014F5415D006E426E /* pngwutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 3781E30114F5415D006E426E /* pngwutil.c */; };
 		3781E31214F5428F006E426E /* blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 3781E31114F5428F006E426E /* blood.png */; };
 		37A1B7A114F68FB000EF7B0C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A1B7A014F68FB000EF7B0C /* background.png */; };
-		37F11B0D14F6724200363E81 /* Matrix33.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F11B0C14F6724200363E81 /* Matrix33.cpp */; };
 		37F6F3EC14F530B00028EDC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3EB14F530B00028EDC4 /* UIKit.framework */; };
 		37F6F3EE14F530B00028EDC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3ED14F530B00028EDC4 /* Foundation.framework */; };
 		37F6F3F014F530B00028EDC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3EF14F530B00028EDC4 /* CoreGraphics.framework */; };
@@ -39,15 +38,18 @@
 		37F6F40A14F530B00028EDC4 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37F6F40814F530B00028EDC4 /* ViewController_iPhone.xib */; };
 		37F6F40D14F530B00028EDC4 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37F6F40B14F530B00028EDC4 /* ViewController_iPad.xib */; };
 		37F6F42E14F532C70028EDC4 /* MyGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F42B14F532C70028EDC4 /* MyGame.cpp */; };
-		37F6F44414F532DC0028EDC4 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F42F14F532DC0028EDC4 /* Application.cpp */; };
-		37F6F44514F532DC0028EDC4 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F43214F532DC0028EDC4 /* Device.cpp */; };
-		37F6F44614F532DC0028EDC4 /* FileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F43414F532DC0028EDC4 /* FileSystem.cpp */; };
-		37F6F44714F532DC0028EDC4 /* Graphics2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F43614F532DC0028EDC4 /* Graphics2D.cpp */; };
-		37F6F44814F532DC0028EDC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F43A14F532DC0028EDC4 /* AppDelegate.m */; };
-		37F6F44914F532DC0028EDC4 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F43C14F532DC0028EDC4 /* ViewController.mm */; };
-		37F6F44A14F532DC0028EDC4 /* IOSDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F43D14F532DC0028EDC4 /* IOSDevice.cpp */; };
-		37F6F44C14F532DC0028EDC4 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F44214F532DC0028EDC4 /* Texture.cpp */; };
 		C364976414F68E2200E4630A /* LogoState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C364976214F68E2200E4630A /* LogoState.cpp */; };
+		C399353714FE613200AA4169 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399351614FE613200AA4169 /* Application.cpp */; };
+		C399353814FE613200AA4169 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399351914FE613200AA4169 /* Device.cpp */; };
+		C399353914FE613200AA4169 /* Graphics2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399351F14FE613200AA4169 /* Graphics2D.cpp */; };
+		C399353A14FE613200AA4169 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399352114FE613200AA4169 /* Texture.cpp */; };
+		C399353B14FE613200AA4169 /* FileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399352514FE613200AA4169 /* FileSystem.cpp */; };
+		C399353C14FE613200AA4169 /* Matrix33.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399352914FE613200AA4169 /* Matrix33.cpp */; };
+		C399353D14FE613200AA4169 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C399352E14FE613200AA4169 /* AppDelegate.m */; };
+		C399353E14FE613200AA4169 /* IOSDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399352F14FE613200AA4169 /* IOSDevice.cpp */; };
+		C399353F14FE613200AA4169 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C399353214FE613200AA4169 /* ViewController.mm */; };
+		C399354014FE613200AA4169 /* WinApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399353414FE613200AA4169 /* WinApplication.cpp */; };
+		C399354114FE613200AA4169 /* WinDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399353514FE613200AA4169 /* WinDevice.cpp */; };
 		C3C8297D14F690790001CC65 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3C8297C14F690790001CC65 /* MainMenuState.cpp */; };
 /* End PBXBuildFile section */
 
@@ -81,9 +83,6 @@
 		3781E31114F5428F006E426E /* blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blood.png; path = ../../../Binary/blood.png; sourceTree = "<group>"; };
 		37A1B7A014F68FB000EF7B0C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../Binary/background.png; sourceTree = "<group>"; };
 		37D5EBE114F68D4400ECF83F /* BackgroundData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundData.h; path = ../../../Source/Game/BackgroundData.h; sourceTree = "<group>"; };
-		37F11B0B14F66FF700363E81 /* Matrix33.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix33.h; path = ../../../Source/GameEngine/Matrix33.h; sourceTree = "<group>"; };
-		37F11B0C14F6724200363E81 /* Matrix33.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix33.cpp; path = ../../../Source/GameEngine/Matrix33.cpp; sourceTree = "<group>"; };
-		37F11B0E14F6828F00363E81 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = ../../../Source/GameEngine/Engine.h; sourceTree = "<group>"; };
 		37F6F3E714F530B00028EDC4 /* GameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F6F3EB14F530B00028EDC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37F6F3ED14F530B00028EDC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,27 +97,33 @@
 		37F6F40C14F530B00028EDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		37F6F42B14F532C70028EDC4 /* MyGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyGame.cpp; path = ../../../Source/Game/MyGame.cpp; sourceTree = "<group>"; };
 		37F6F42C14F532C70028EDC4 /* MyGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyGame.h; path = ../../../Source/Game/MyGame.h; sourceTree = "<group>"; };
-		37F6F42F14F532DC0028EDC4 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = ../../../Source/GameEngine/Application.cpp; sourceTree = "<group>"; };
-		37F6F43014F532DC0028EDC4 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Application.h; path = ../../../Source/GameEngine/Application.h; sourceTree = "<group>"; };
-		37F6F43114F532DC0028EDC4 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = ../../../Source/GameEngine/Config.h; sourceTree = "<group>"; };
-		37F6F43214F532DC0028EDC4 /* Device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Device.cpp; path = ../../../Source/GameEngine/Device.cpp; sourceTree = "<group>"; };
-		37F6F43314F532DC0028EDC4 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Device.h; path = ../../../Source/GameEngine/Device.h; sourceTree = "<group>"; };
-		37F6F43414F532DC0028EDC4 /* FileSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileSystem.cpp; path = ../../../Source/GameEngine/FileSystem.cpp; sourceTree = "<group>"; };
-		37F6F43514F532DC0028EDC4 /* FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileSystem.h; path = ../../../Source/GameEngine/FileSystem.h; sourceTree = "<group>"; };
-		37F6F43614F532DC0028EDC4 /* Graphics2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Graphics2D.cpp; path = ../../../Source/GameEngine/Graphics2D.cpp; sourceTree = "<group>"; };
-		37F6F43714F532DC0028EDC4 /* Graphics2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Graphics2D.h; path = ../../../Source/GameEngine/Graphics2D.h; sourceTree = "<group>"; };
-		37F6F43914F532DC0028EDC4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		37F6F43A14F532DC0028EDC4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		37F6F43B14F532DC0028EDC4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		37F6F43C14F532DC0028EDC4 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
-		37F6F43D14F532DC0028EDC4 /* IOSDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOSDevice.cpp; sourceTree = "<group>"; };
-		37F6F43E14F532DC0028EDC4 /* IOSDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSDevice.h; sourceTree = "<group>"; };
-		37F6F44014F532DC0028EDC4 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = ../../../Source/GameEngine/Singleton.h; sourceTree = "<group>"; };
-		37F6F44114F532DC0028EDC4 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = State.h; path = ../../../Source/GameEngine/State.h; sourceTree = "<group>"; };
-		37F6F44214F532DC0028EDC4 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = ../../../Source/GameEngine/Texture.cpp; sourceTree = "<group>"; };
-		37F6F44314F532DC0028EDC4 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = ../../../Source/GameEngine/Texture.h; sourceTree = "<group>"; };
 		C364976214F68E2200E4630A /* LogoState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogoState.cpp; sourceTree = "<group>"; };
 		C364976314F68E2200E4630A /* LogoState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoState.h; sourceTree = "<group>"; };
+		C399351614FE613200AA4169 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		C399351714FE613200AA4169 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		C399351814FE613200AA4169 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		C399351914FE613200AA4169 /* Device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Device.cpp; sourceTree = "<group>"; };
+		C399351A14FE613200AA4169 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		C399351B14FE613200AA4169 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		C399351C14FE613200AA4169 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		C399351D14FE613200AA4169 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		C399351F14FE613200AA4169 /* Graphics2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics2D.cpp; sourceTree = "<group>"; };
+		C399352014FE613200AA4169 /* Graphics2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graphics2D.h; sourceTree = "<group>"; };
+		C399352114FE613200AA4169 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		C399352214FE613200AA4169 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		C399352514FE613200AA4169 /* FileSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileSystem.cpp; sourceTree = "<group>"; };
+		C399352614FE613200AA4169 /* FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSystem.h; sourceTree = "<group>"; };
+		C399352914FE613200AA4169 /* Matrix33.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix33.cpp; sourceTree = "<group>"; };
+		C399352A14FE613200AA4169 /* Matrix33.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix33.h; sourceTree = "<group>"; };
+		C399352D14FE613200AA4169 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C399352E14FE613200AA4169 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C399352F14FE613200AA4169 /* IOSDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOSDevice.cpp; sourceTree = "<group>"; };
+		C399353014FE613200AA4169 /* IOSDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSDevice.h; sourceTree = "<group>"; };
+		C399353114FE613200AA4169 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C399353214FE613200AA4169 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		C399353414FE613200AA4169 /* WinApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WinApplication.cpp; sourceTree = "<group>"; };
+		C399353514FE613200AA4169 /* WinDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WinDevice.cpp; sourceTree = "<group>"; };
+		C399353614FE613200AA4169 /* WinDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinDevice.h; sourceTree = "<group>"; };
 		C3C8297C14F690790001CC65 /* MainMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuState.cpp; sourceTree = "<group>"; };
 		C3C8297F14F690970001CC65 /* MainMenuState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuState.h; sourceTree = "<group>"; };
 		C3C8298014F691E30001CC65 /* LoadingState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LoadingState.cpp; sourceTree = "<group>"; };
@@ -170,37 +175,6 @@
 			);
 			name = LIBPNG;
 			path = ../../Library/LIBPNG;
-			sourceTree = "<group>";
-		};
-		37F11B0714F66FB400363E81 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				37F11B0914F66FC600363E81 /* Math */,
-				37F6F42F14F532DC0028EDC4 /* Application.cpp */,
-				37F6F43014F532DC0028EDC4 /* Application.h */,
-				37F6F43114F532DC0028EDC4 /* Config.h */,
-				37F6F43214F532DC0028EDC4 /* Device.cpp */,
-				37F6F43314F532DC0028EDC4 /* Device.h */,
-				37F6F43414F532DC0028EDC4 /* FileSystem.cpp */,
-				37F6F43514F532DC0028EDC4 /* FileSystem.h */,
-				37F6F43614F532DC0028EDC4 /* Graphics2D.cpp */,
-				37F6F43714F532DC0028EDC4 /* Graphics2D.h */,
-				37F6F44014F532DC0028EDC4 /* Singleton.h */,
-				37F6F44114F532DC0028EDC4 /* State.h */,
-				37F6F44214F532DC0028EDC4 /* Texture.cpp */,
-				37F6F44314F532DC0028EDC4 /* Texture.h */,
-				37F11B0E14F6828F00363E81 /* Engine.h */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		37F11B0914F66FC600363E81 /* Math */ = {
-			isa = PBXGroup;
-			children = (
-				37F11B0B14F66FF700363E81 /* Matrix33.h */,
-				37F11B0C14F6724200363E81 /* Matrix33.cpp */,
-			);
-			name = Math;
 			sourceTree = "<group>";
 		};
 		37F6F3DC14F530B00028EDC4 = {
@@ -289,8 +263,8 @@
 		37F6F42714F532AE0028EDC4 /* GameEngine */ = {
 			isa = PBXGroup;
 			children = (
-				37F11B0714F66FB400363E81 /* Core */,
-				37F6F43814F532DC0028EDC4 /* IOS */,
+				C399351414FE613200AA4169 /* Core */,
+				C399352B14FE613200AA4169 /* Platforms */,
 			);
 			name = GameEngine;
 			sourceTree = "<group>";
@@ -306,20 +280,6 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
-		37F6F43814F532DC0028EDC4 /* IOS */ = {
-			isa = PBXGroup;
-			children = (
-				37F6F43914F532DC0028EDC4 /* AppDelegate.h */,
-				37F6F43A14F532DC0028EDC4 /* AppDelegate.m */,
-				37F6F43B14F532DC0028EDC4 /* ViewController.h */,
-				37F6F43C14F532DC0028EDC4 /* ViewController.mm */,
-				37F6F43D14F532DC0028EDC4 /* IOSDevice.cpp */,
-				37F6F43E14F532DC0028EDC4 /* IOSDevice.h */,
-			);
-			name = IOS;
-			path = ../../../Source/GameEngine/IOS;
-			sourceTree = "<group>";
-		};
 		C364976014F68DE400E4630A /* GameStates */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +292,111 @@
 			);
 			name = GameStates;
 			path = ../../../Source/Game/GameStates;
+			sourceTree = "<group>";
+		};
+		C399351414FE613200AA4169 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C399351514FE613200AA4169 /* Common */,
+				C399351E14FE613200AA4169 /* Graphics */,
+				C399352314FE613200AA4169 /* IO */,
+				C399352814FE613200AA4169 /* Math */,
+			);
+			name = Core;
+			path = ../../../Source/GameEngine/Core;
+			sourceTree = "<group>";
+		};
+		C399351514FE613200AA4169 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C399351614FE613200AA4169 /* Application.cpp */,
+				C399351714FE613200AA4169 /* Application.h */,
+				C399351814FE613200AA4169 /* Config.h */,
+				C399351914FE613200AA4169 /* Device.cpp */,
+				C399351A14FE613200AA4169 /* Device.h */,
+				C399351B14FE613200AA4169 /* Engine.h */,
+				C399351C14FE613200AA4169 /* Singleton.h */,
+				C399351D14FE613200AA4169 /* State.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C399351E14FE613200AA4169 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				C399351F14FE613200AA4169 /* Graphics2D.cpp */,
+				C399352014FE613200AA4169 /* Graphics2D.h */,
+				C399352114FE613200AA4169 /* Texture.cpp */,
+				C399352214FE613200AA4169 /* Texture.h */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		C399352314FE613200AA4169 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				C399352414FE613200AA4169 /* FileSystem */,
+				C399352714FE613200AA4169 /* TouchScreen */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		C399352414FE613200AA4169 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				C399352514FE613200AA4169 /* FileSystem.cpp */,
+				C399352614FE613200AA4169 /* FileSystem.h */,
+			);
+			path = FileSystem;
+			sourceTree = "<group>";
+		};
+		C399352714FE613200AA4169 /* TouchScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TouchScreen;
+			sourceTree = "<group>";
+		};
+		C399352814FE613200AA4169 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				C399352914FE613200AA4169 /* Matrix33.cpp */,
+				C399352A14FE613200AA4169 /* Matrix33.h */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		C399352B14FE613200AA4169 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				C399352C14FE613200AA4169 /* IOS */,
+				C399353314FE613200AA4169 /* Win32 */,
+			);
+			name = Platforms;
+			path = ../../../Source/GameEngine/Platforms;
+			sourceTree = "<group>";
+		};
+		C399352C14FE613200AA4169 /* IOS */ = {
+			isa = PBXGroup;
+			children = (
+				C399352D14FE613200AA4169 /* AppDelegate.h */,
+				C399352E14FE613200AA4169 /* AppDelegate.m */,
+				C399352F14FE613200AA4169 /* IOSDevice.cpp */,
+				C399353014FE613200AA4169 /* IOSDevice.h */,
+				C399353114FE613200AA4169 /* ViewController.h */,
+				C399353214FE613200AA4169 /* ViewController.mm */,
+			);
+			path = IOS;
+			sourceTree = "<group>";
+		};
+		C399353314FE613200AA4169 /* Win32 */ = {
+			isa = PBXGroup;
+			children = (
+				C399353414FE613200AA4169 /* WinApplication.cpp */,
+				C399353514FE613200AA4169 /* WinDevice.cpp */,
+				C399353614FE613200AA4169 /* WinDevice.h */,
+			);
+			path = Win32;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,14 +469,6 @@
 			files = (
 				37F6F3FC14F530B00028EDC4 /* main.m in Sources */,
 				37F6F42E14F532C70028EDC4 /* MyGame.cpp in Sources */,
-				37F6F44414F532DC0028EDC4 /* Application.cpp in Sources */,
-				37F6F44514F532DC0028EDC4 /* Device.cpp in Sources */,
-				37F6F44614F532DC0028EDC4 /* FileSystem.cpp in Sources */,
-				37F6F44714F532DC0028EDC4 /* Graphics2D.cpp in Sources */,
-				37F6F44814F532DC0028EDC4 /* AppDelegate.m in Sources */,
-				37F6F44914F532DC0028EDC4 /* ViewController.mm in Sources */,
-				37F6F44A14F532DC0028EDC4 /* IOSDevice.cpp in Sources */,
-				37F6F44C14F532DC0028EDC4 /* Texture.cpp in Sources */,
 				3781E30214F5415D006E426E /* png.c in Sources */,
 				3781E30314F5415D006E426E /* pngerror.c in Sources */,
 				3781E30414F5415D006E426E /* pngget.c in Sources */,
@@ -427,9 +484,19 @@
 				3781E30E14F5415D006E426E /* pngwrite.c in Sources */,
 				3781E30F14F5415D006E426E /* pngwtran.c in Sources */,
 				3781E31014F5415D006E426E /* pngwutil.c in Sources */,
-				37F11B0D14F6724200363E81 /* Matrix33.cpp in Sources */,
 				C364976414F68E2200E4630A /* LogoState.cpp in Sources */,
 				C3C8297D14F690790001CC65 /* MainMenuState.cpp in Sources */,
+				C399353714FE613200AA4169 /* Application.cpp in Sources */,
+				C399353814FE613200AA4169 /* Device.cpp in Sources */,
+				C399353914FE613200AA4169 /* Graphics2D.cpp in Sources */,
+				C399353A14FE613200AA4169 /* Texture.cpp in Sources */,
+				C399353B14FE613200AA4169 /* FileSystem.cpp in Sources */,
+				C399353C14FE613200AA4169 /* Matrix33.cpp in Sources */,
+				C399353D14FE613200AA4169 /* AppDelegate.m in Sources */,
+				C399353E14FE613200AA4169 /* IOSDevice.cpp in Sources */,
+				C399353F14FE613200AA4169 /* ViewController.mm in Sources */,
+				C399354014FE613200AA4169 /* WinApplication.cpp in Sources */,
+				C399354114FE613200AA4169 /* WinDevice.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
