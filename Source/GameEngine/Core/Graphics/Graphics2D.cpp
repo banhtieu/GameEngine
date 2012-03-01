@@ -147,7 +147,7 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int
 {
   SetTexture(texture);
   
-  int vertices[] = {
+  float vertices[] = {
     dx, 
     dy,
     dx + w,
@@ -172,7 +172,7 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int
     sy * (y + h)
   };
   
-  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_INT, GL_FALSE, 0, vertices);
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
   glEnableVertexAttribArray(ATTRIB_POSITION);
   
   glVertexAttribPointer(ATTRIB_TEXCOORD, 2, GL_FLOAT, GL_FALSE, 0, texcoord);
@@ -219,9 +219,9 @@ void Graphics2D::SetColor(Color color)
 // Draw a Line
 void Graphics2D::DrawLine(int x1, int y1, int x2, int y2)
 {
-  int vertices[] = {x1, y1, x2, y2};
+  float vertices[] = {x1, y1, x2, y2};
   
-  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_INT, GL_FALSE, 0, vertices);
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
   glEnableVertexAttribArray(ATTRIB_POSITION);
   
   glBindTexture(GL_TEXTURE_2D, 0);
@@ -239,9 +239,9 @@ void Graphics2D::DrawLine(int x1, int y1, int x2, int y2)
 
 void Graphics2D::DrawRectangle(int x, int y, int w, int h)
 {
-  int vertices[] = {x, y, x + w, y, x + w, y + h, x, y + h};
+  float vertices[] = {x, y, x + w, y, x + w, y + h, x, y + h};
   
-  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_INT, GL_FALSE, 0, vertices);
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
   glEnableVertexAttribArray(ATTRIB_POSITION);
   
   glBindTexture(GL_TEXTURE_2D, 0);
@@ -284,9 +284,9 @@ void Graphics2D::DrawCirle(int x, int y, int r)
 
 void Graphics2D::FillRectange(int x, int y, int w, int h)
 {
-  int vertices[] = {x, y, x + w, y, x, y + h, x + w, y + h};
+  float vertices[] = {x, y, x + w, y, x, y + h, x + w, y + h};
   
-  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_INT, GL_FALSE, 0, vertices);
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
   glEnableVertexAttribArray(ATTRIB_POSITION);
   
   glBindTexture(GL_TEXTURE_2D, 0);
