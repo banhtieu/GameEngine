@@ -28,6 +28,8 @@
 		3781E31014F5415D006E426E /* pngwutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 3781E30114F5415D006E426E /* pngwutil.c */; };
 		3781E31214F5428F006E426E /* blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 3781E31114F5428F006E426E /* blood.png */; };
 		37A1B7A114F68FB000EF7B0C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A1B7A014F68FB000EF7B0C /* background.png */; };
+		37D6F22B14FFC1CC00008965 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37D6F22A14FFC1CC00008965 /* Sprite.cpp */; };
+		37D6F22F14FFCDD600008965 /* logo.bin in Resources */ = {isa = PBXBuildFile; fileRef = 37D6F22E14FFCDD600008965 /* logo.bin */; };
 		37F6F3EC14F530B00028EDC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3EB14F530B00028EDC4 /* UIKit.framework */; };
 		37F6F3EE14F530B00028EDC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3ED14F530B00028EDC4 /* Foundation.framework */; };
 		37F6F3F014F530B00028EDC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3EF14F530B00028EDC4 /* CoreGraphics.framework */; };
@@ -83,6 +85,10 @@
 		3781E31114F5428F006E426E /* blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blood.png; path = ../../../Binary/blood.png; sourceTree = "<group>"; };
 		37A1B7A014F68FB000EF7B0C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../Binary/background.png; sourceTree = "<group>"; };
 		37D5EBE114F68D4400ECF83F /* BackgroundData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundData.h; path = ../../../Source/Game/BackgroundData.h; sourceTree = "<group>"; };
+		37D6F22814FFBA2600008965 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		37D6F22A14FFC1CC00008965 /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
+		37D6F22D14FFCD3500008965 /* logo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = logo.h; path = ../../../Binary/logo.h; sourceTree = "<group>"; };
+		37D6F22E14FFCDD600008965 /* logo.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = logo.bin; path = ../../../Binary/logo.bin; sourceTree = "<group>"; };
 		37F6F3E714F530B00028EDC4 /* GameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F6F3EB14F530B00028EDC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37F6F3ED14F530B00028EDC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -177,6 +183,14 @@
 			path = ../../Library/LIBPNG;
 			sourceTree = "<group>";
 		};
+		37D6F22C14FFCD2300008965 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				37D6F22D14FFCD3500008965 /* logo.h */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
 		37F6F3DC14F530B00028EDC4 = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +246,7 @@
 		37F6F42414F532580028EDC4 /* Binary */ = {
 			isa = PBXGroup;
 			children = (
+				37D6F22E14FFCDD600008965 /* logo.bin */,
 				37A1B7A014F68FB000EF7B0C /* background.png */,
 				3781E31114F5428F006E426E /* blood.png */,
 				3781E2E314F53F88006E426E /* Shader.fsh */,
@@ -272,6 +287,7 @@
 		37F6F42814F532B90028EDC4 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				37D6F22C14FFCD2300008965 /* Generated */,
 				C364976014F68DE400E4630A /* GameStates */,
 				37F6F42B14F532C70028EDC4 /* MyGame.cpp */,
 				37F6F42C14F532C70028EDC4 /* MyGame.h */,
@@ -328,6 +344,8 @@
 				C399352014FE613200AA4169 /* Graphics2D.h */,
 				C399352114FE613200AA4169 /* Texture.cpp */,
 				C399352214FE613200AA4169 /* Texture.h */,
+				37D6F22814FFBA2600008965 /* Sprite.h */,
+				37D6F22A14FFC1CC00008965 /* Sprite.cpp */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -457,6 +475,7 @@
 				3781E2E214F53F49006E426E /* logo.png in Resources */,
 				3781E31214F5428F006E426E /* blood.png in Resources */,
 				37A1B7A114F68FB000EF7B0C /* background.png in Resources */,
+				37D6F22F14FFCDD600008965 /* logo.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +516,7 @@
 				C399353F14FE613200AA4169 /* ViewController.mm in Sources */,
 				C399354014FE613200AA4169 /* WinApplication.cpp in Sources */,
 				C399354114FE613200AA4169 /* WinDevice.cpp in Sources */,
+				37D6F22B14FFC1CC00008965 /* Sprite.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
