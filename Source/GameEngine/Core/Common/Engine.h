@@ -13,6 +13,7 @@
 #include "Singleton.h"
 #include "Matrix33.h"
 #include "Texture.h"
+#include "Sprite.h"
 #include "Graphics2D.h"
 #include "State.h"
 #include "FileSystem.h"

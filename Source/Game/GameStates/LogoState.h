@@ -21,6 +21,7 @@ protected:
   Texture *logo;
   Texture *background;
   int logoFrame;
+  Sprite *sprite;
 };
 
 #endif

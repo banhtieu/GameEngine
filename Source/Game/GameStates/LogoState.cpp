@@ -8,17 +8,20 @@
 
 #include "LogoState.h"
 #include "BackgroundData.h"
+#include "logo.h"
 
 void LogoState::Init()
 {
   logo = Texture::LoadTexturePNG("logo.png");
   background = Texture::LoadTexturePNG("background.png");
+  sprite = new Sprite("logo");
   logoFrame = 0;
 }
 
 void LogoState::Render(Graphics2D *g)
 {
-  static int bgSpeed = 0;
+  sprite->DrawModule(M_LOGO, SCREEN_WD2, SCREEN_HD2);
+  /* static int bgSpeed = 0;
   static int frontSpeed = 0;
   bgSpeed -= 2;
   frontSpeed -= 15;
@@ -56,7 +59,7 @@ void LogoState::Render(Graphics2D *g)
   
   g->SetColor(0xff00ff00);
   g->DrawLine(0, 0, SCREEN_W, SCREEN_H);
-  g->FillCircle(100, 100, 50);
+  g->FillCircle(100, 100, 50); */
 
 };
 
