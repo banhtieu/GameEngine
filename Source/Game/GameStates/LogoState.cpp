@@ -20,7 +20,9 @@ void LogoState::Init()
 
 void LogoState::Render(Graphics2D *g)
 {
-  sprite->DrawModule(M_LOGO, SCREEN_WD2, SCREEN_HD2);
+//  sprite->DrawModule(M_LOGO, 0, 0);
+//  sprite->DrawFrame(F_LOGO, SCREEN_WD2, SCREEN_HD2);
+  sprite->DrawFrame(F_BIKE + logoFrame, SCREEN_WD2, SCREEN_HD2);
   /* static int bgSpeed = 0;
   static int frontSpeed = 0;
   bgSpeed -= 2;
@@ -65,4 +67,5 @@ void LogoState::Render(Graphics2D *g)
 
 void LogoState::Update()
 {
+  logoFrame = (logoFrame + 1) % 4;
 }

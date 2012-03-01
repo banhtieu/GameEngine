@@ -48,6 +48,7 @@ public:
   virtual void FreeTexture(Texture *texture);
   virtual void DrawTexture(Texture *texture, int dx, int dy, const Frame2D &frame);
   virtual void DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h);
+  virtual void DrawTexture(Texture *texture, int x, int y, int nVertices, float *vertices, float *texcoord);
   virtual void SetTransform(const Matrix33 &transform);
   virtual void ClearFrame();
   

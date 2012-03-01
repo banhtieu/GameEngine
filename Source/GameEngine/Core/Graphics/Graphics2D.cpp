@@ -143,6 +143,7 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, const Frame2D &fr
   DrawTexture(texture, dx, dy, frame.x, frame.y, frame.w, frame.h);
 }
 
+// Draw Texture
 void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h)
 {
   SetTexture(texture);
@@ -186,6 +187,27 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int
   
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
   
+}
+
+// Draw Texture with vertices and Texcoord
+void Graphics2D::DrawTexture(Texture *texture, int x, int y, int nVertices, float *vertices, float *texcoord)
+{
+  SetTexture(texture);
+  
+  glVertexAttribPointer(ATTRIB_POSITION, 2, GL_FLOAT, GL_FALSE, 0, vertices);
+  glEnableVertexAttribArray(ATTRIB_POSITION);
+  
+  glVertexAttribPointer(ATTRIB_TEXCOORD, 2, GL_FLOAT, GL_FALSE, 0, texcoord);
+  glEnableVertexAttribArray(ATTRIB_TEXCOORD);
+  
+
+  Matrix33 result = screen * transform * Matrix33::TranslateMatrix(x, y);
+  
+  glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) result.value.m);
+  glUniform1i(uniforms[USE_COLOR], 0);
+  glUniform1f(uniforms[ALPHA], alphaBlender);
+  
+  glDrawArrays(GL_TRIANGLES, 0, nVertices);
 }
 
 // Set ALpha to Draw

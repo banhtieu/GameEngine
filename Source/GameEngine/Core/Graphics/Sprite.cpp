@@ -59,7 +59,11 @@ void Sprite::LoadSprite(const char *name)
 
 void Sprite::DrawFrame(int frame, int x, int y)
 {
-  
+  Graphics2D *graphic = Graphics2D::GetInstance();
+  if (frame < nFrames)
+  {
+    graphic->DrawTexture(texture, x, y, frames[frame].nVertices, frames[frame].vertices, frames[frame].texcoord);
+  }
 }
 
 void Sprite::DrawModule(int module, int x, int y)
