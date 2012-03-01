@@ -5,12 +5,11 @@
 //  Created by Tran Khiem on 2/11/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
-
 #import "ViewController.h"
 
 #import "MyGame.h"
 #import "IOSDevice.h"
-
+#include "../../Core/IO/TouchScreen/TouchScreenIPhone.h"
 
 @interface ViewController () 
 
@@ -89,8 +88,14 @@ FileSystem *fileSystem;
 // Handles the start of a touch
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    CGRect				bounds;// = [self bounds];
+	//UITouch*			touch = [[event touchesForView:self] anyObject];
 	
 	for (UITouch *touch in touches) {
+        CGPoint iPoint = [touch locationInView:NULL];
+		{
+            CGPoint iPointLast = [touch previousLocationInView:NULL];
+        }
     }
     
 }

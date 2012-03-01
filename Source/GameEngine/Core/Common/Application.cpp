@@ -7,6 +7,7 @@
 //
 
 #include "Engine.h"
+#include "TouchScreeniPhone.h"
 
 Application::Application():currentState(0)
 {
@@ -19,6 +20,7 @@ Application::~Application()
 // Init the application.
 void Application::Init()
 {
+    //m_touchScreen = new TouchScreeniPhone(0, 0, 960, 640);
 };
 
 // Update the Application.

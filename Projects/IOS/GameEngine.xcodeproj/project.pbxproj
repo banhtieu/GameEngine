@@ -52,6 +52,7 @@
 		C399353F14FE613200AA4169 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C399353214FE613200AA4169 /* ViewController.mm */; };
 		C399354014FE613200AA4169 /* WinApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399353414FE613200AA4169 /* WinApplication.cpp */; };
 		C399354114FE613200AA4169 /* WinDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399353514FE613200AA4169 /* WinDevice.cpp */; };
+		C399354314FFB46000AA4169 /* TouchScreeniPhone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399354214FFB46000AA4169 /* TouchScreeniPhone.cpp */; };
 		C3C8297D14F690790001CC65 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3C8297C14F690790001CC65 /* MainMenuState.cpp */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,12 @@
 		C399353414FE613200AA4169 /* WinApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WinApplication.cpp; sourceTree = "<group>"; };
 		C399353514FE613200AA4169 /* WinDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WinDevice.cpp; sourceTree = "<group>"; };
 		C399353614FE613200AA4169 /* WinDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinDevice.h; sourceTree = "<group>"; };
+		C399354214FFB46000AA4169 /* TouchScreeniPhone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchScreeniPhone.cpp; sourceTree = "<group>"; };
+		C399354414FFB4BF00AA4169 /* TouchScreeniPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchScreeniPhone.h; sourceTree = "<group>"; };
+		C399354514FFB53B00AA4169 /* TouchScreenBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TouchScreenBase.cpp; sourceTree = "<group>"; };
+		C399354614FFB53B00AA4169 /* TouchScreenBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchScreenBase.h; sourceTree = "<group>"; };
+		C399354814FFB86300AA4169 /* Point2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point2D.h; sourceTree = "<group>"; };
+		C399354914FFC38F00AA4169 /* Rect2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect2D.h; sourceTree = "<group>"; };
 		C3C8297C14F690790001CC65 /* MainMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuState.cpp; sourceTree = "<group>"; };
 		C3C8297F14F690970001CC65 /* MainMenuState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuState.h; sourceTree = "<group>"; };
 		C3C8298014F691E30001CC65 /* LoadingState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LoadingState.cpp; sourceTree = "<group>"; };
@@ -346,6 +353,8 @@
 				C399352214FE613200AA4169 /* Texture.h */,
 				37D6F22814FFBA2600008965 /* Sprite.h */,
 				37D6F22A14FFC1CC00008965 /* Sprite.cpp */,
+				C399354814FFB86300AA4169 /* Point2D.h */,
+				C399354914FFC38F00AA4169 /* Rect2D.h */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -371,6 +380,10 @@
 		C399352714FE613200AA4169 /* TouchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				C399354514FFB53B00AA4169 /* TouchScreenBase.cpp */,
+				C399354614FFB53B00AA4169 /* TouchScreenBase.h */,
+				C399354214FFB46000AA4169 /* TouchScreeniPhone.cpp */,
+				C399354414FFB4BF00AA4169 /* TouchScreeniPhone.h */,
 			);
 			path = TouchScreen;
 			sourceTree = "<group>";
@@ -517,6 +530,7 @@
 				C399354014FE613200AA4169 /* WinApplication.cpp in Sources */,
 				C399354114FE613200AA4169 /* WinDevice.cpp in Sources */,
 				37D6F22B14FFC1CC00008965 /* Sprite.cpp in Sources */,
+				C399354314FFB46000AA4169 /* TouchScreeniPhone.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

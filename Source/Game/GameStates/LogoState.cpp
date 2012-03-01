@@ -25,7 +25,7 @@ void LogoState::Render(Graphics2D *g)
   sprite->DrawFrame(F_BIKE + logoFrame, SCREEN_WD2, SCREEN_HD2);
   /* static int bgSpeed = 0;
   static int frontSpeed = 0;
-  bgSpeed -= 2;
+ /* bgSpeed -= 2;
   frontSpeed -= 15;
   
   if (bgSpeed < - bgFrameData[BG1].w - bgFrameData[BG2].w)

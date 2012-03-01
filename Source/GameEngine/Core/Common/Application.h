@@ -9,6 +9,8 @@
 #ifndef GameEngine_BTApplication_h
 #define GameEngine_BTApplication_h
 
+
+class TouchScreenBase;
 class Application:public Singleton<Application>
 {
 public:
@@ -21,6 +23,8 @@ public:
   virtual void SwitchState(State *newState);
 protected:
   State *currentState;
+public:
+  TouchScreenBase*		m_touchScreen;
 };
 
 #endif
