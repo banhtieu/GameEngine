@@ -17,6 +17,7 @@ public:
   virtual void Init();
   virtual void Render(Graphics2D *g);
   virtual void Update();
+  virtual void Free();
 protected:
   Texture *logo;
   Texture *background;

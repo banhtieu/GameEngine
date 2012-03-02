@@ -1,9 +1,8 @@
-//
-//  TouchScreeniPhone.cpp
-//  GameEngine
-//
-//  Created by Quang Phan on 01/03/2012.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
 
 #include "TouchScreeniPhone.h"
+
+
+void TouchScreeniPhone::touchBegan(float x, float y, double timestamp, int tapCount, float oldX, float oldY, long id)
+{
+    TouchScreenBase::touchBegan(TouchPoint((TouchType)x, (TouchType)y), (TouchID)0);
+}

@@ -103,6 +103,8 @@ public:
 	virtual void				touchCancelled(const TouchPoint& point, TouchID touchID);
     
     
+    TouchID						getID(TouchID touchID);
+    
     //update
     void						update(double timestamp);
 };

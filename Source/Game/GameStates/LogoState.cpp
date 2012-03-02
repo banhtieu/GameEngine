@@ -9,7 +9,7 @@
 #include "LogoState.h"
 #include "BackgroundData.h"
 #include "logo.h"
-
+#include "MainMenuState.h"
 void LogoState::Init()
 {
   logo = Texture::LoadTexturePNG("logo.png");
@@ -68,4 +68,12 @@ void LogoState::Render(Graphics2D *g)
 void LogoState::Update()
 {
   logoFrame = (logoFrame + 1) % 4;
+   // Application::GetInstance()->SwitchState(new MainMenuState());
+}
+
+void LogoState::Free()
+{
+    delete background;
+    delete sprite;
+    
 }
