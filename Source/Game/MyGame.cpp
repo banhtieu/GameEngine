@@ -8,8 +8,12 @@
 
 #include "MyGame.h"
 #include "LogoState.h"
+#include "InGameState.h"
+#include <Box2D/Box2D.h>
 
 void MyGame::Init()
 {
-  SwitchState(new LogoState());
+  SwitchState(new InGameState());
 }
+
+
