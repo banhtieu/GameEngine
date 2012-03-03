@@ -231,6 +231,18 @@ void Graphics2D::SetTransform(const Matrix33 &transform)
   this->transform = transform;
 }
 
+// Concat the transform with current transformation 
+void Graphics2D::ConcatTrasform(const Matrix33 &addtional)
+{
+  transform = transform * addtional;
+}
+
+// Get Current Transformation
+Matrix33 &Graphics2D::GetTransform()
+{
+  return transform;
+}
+
 // Draw Basic Shape - To Debug
 // Draw Basic Shape
 void Graphics2D::SetColor(Color color)
@@ -278,6 +290,7 @@ void Graphics2D::DrawRectangle(int x, int y, int w, int h)
   glDrawArrays(GL_LINE_LOOP, 0, 4);
 }
 
+// Draw the Circle
 void Graphics2D::DrawCirle(int x, int y, int r)
 {
   float vertices[36];
@@ -349,4 +362,16 @@ void Graphics2D::FillCircle(int x, int y, int r)
   glUniform4f(uniforms[COLOR], color.r, color.g, color.b, color.a);
   
   glDrawArrays(GL_TRIANGLE_FAN, 0, 18);
+}
+
+// Save Transformation
+void Graphics2D::Save()
+{
+  savedMatrices[currentLevel++] = transform;
+}
+
+// Restore Transformation
+void Graphics2D::Restore()
+{
+  SetTransform(savedMatrices[--currentLevel]);
 }

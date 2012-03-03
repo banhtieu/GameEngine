@@ -15,6 +15,9 @@ enum { ATTRIB_POSITION, ATTRIB_COLOR, ATTRIB_TEXCOORD };
 // All uniform here.
 enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, MATRIX, COLOR, NUM_UNIFORMS};
 
+// Number of Matrix Level
+#define NUM_MATRIX_LEVELS 20
+
 class Color
 {
 public:
@@ -50,6 +53,9 @@ public:
   virtual void DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h);
   virtual void DrawTexture(Texture *texture, int x, int y, int nVertices, float *vertices, float *texcoord);
   virtual void SetTransform(const Matrix33 &transform);
+  virtual void ConcatTrasform(const Matrix33 &addtional);
+  virtual Matrix33 &GetTransform();
+  
   virtual void ClearFrame();
   
   // Draw Basic Shape
@@ -60,11 +66,18 @@ public:
   
   virtual void FillRectange(int x, int y, int w, int h);
   virtual void FillCircle(int x, int y, int r);
+  
+  virtual void Save();
+  virtual void Restore();
+  
 protected:
   unsigned int programId;
   unsigned int uniforms[NUM_UNIFORMS];
   Matrix33 transform;
   Matrix33 screen;
+  
+  Matrix33 savedMatrices[NUM_MATRIX_LEVELS];
+  int currentLevel;
   
   bool useColor;
   bool useTexture;

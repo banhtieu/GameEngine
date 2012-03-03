@@ -16,6 +16,7 @@
 
 #include "Core/Graphics/Texture.h"
 #include "Core/Graphics/Sprite.h"
+#include "Core/Graphics/Actor.h"
 #include "Core/Graphics/Graphics2D.h"
 
 #include "Core/Common/State.h"

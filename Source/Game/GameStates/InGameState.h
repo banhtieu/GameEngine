@@ -19,7 +19,8 @@ public:
   virtual void Update();
   virtual void Free();
 protected:
-  Sprite *actor;
+  Sprite *sprite;
+  Actor *mainActor;
 };
 
 

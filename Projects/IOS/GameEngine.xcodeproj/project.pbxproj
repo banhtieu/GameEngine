@@ -53,6 +53,7 @@
 		372446EF1502232B00DA2202 /* b2WheelJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 372446BF1502232B00DA2202 /* b2WheelJoint.cpp */; };
 		372446F01502232B00DA2202 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 372446C21502232B00DA2202 /* b2Rope.cpp */; };
 		372446F31502247900DA2202 /* InGameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 372446F21502247900DA2202 /* InGameState.cpp */; };
+		372446FB15026A2C00DA2202 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 372446FA15026A2B00DA2202 /* Actor.cpp */; };
 		374E515F15021A5F004E65B5 /* TouchScreenBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399354514FFB53B00AA4169 /* TouchScreenBase.cpp */; };
 		3781E2DF14F53A6E006E426E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3781E2DE14F53A6E006E426E /* libz.dylib */; };
 		3781E2E214F53F49006E426E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3781E2E114F53F49006E426E /* logo.png */; };
@@ -197,6 +198,8 @@
 		372446C31502232B00DA2202 /* b2Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Rope.h; sourceTree = "<group>"; };
 		372446F11502243300DA2202 /* InGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InGameState.h; sourceTree = "<group>"; };
 		372446F21502247900DA2202 /* InGameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InGameState.cpp; sourceTree = "<group>"; };
+		372446F9150266AF00DA2202 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		372446FA15026A2B00DA2202 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
 		3781E2DE14F53A6E006E426E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3781E2E114F53F49006E426E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../Binary/logo.png; sourceTree = "<group>"; };
 		3781E2E314F53F88006E426E /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = ../../../Binary/Shader.fsh; sourceTree = "<group>"; };
@@ -669,6 +672,8 @@
 				37D6F22A14FFC1CC00008965 /* Sprite.cpp */,
 				C399354814FFB86300AA4169 /* Point2D.h */,
 				C399354914FFC38F00AA4169 /* Rect2D.h */,
+				372446F9150266AF00DA2202 /* Actor.h */,
+				372446FA15026A2B00DA2202 /* Actor.cpp */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -892,6 +897,7 @@
 				372446EF1502232B00DA2202 /* b2WheelJoint.cpp in Sources */,
 				372446F01502232B00DA2202 /* b2Rope.cpp in Sources */,
 				372446F31502247900DA2202 /* InGameState.cpp in Sources */,
+				372446FB15026A2C00DA2202 /* Actor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

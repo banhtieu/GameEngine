@@ -13,23 +13,27 @@
 // Init The GameState
 void InGameState::Init()
 {
-  actor = new Sprite("logo");
+  sprite = new Sprite("logo");
+  mainActor = new Actor(sprite, F_BIKE, 4);
+  mainActor->SetPosition(SCREEN_WD2, SCREEN_HD2);
+  
 }
 
 
 // 
 void InGameState::Update()
 {
-  
 }
 
+// Render the InGame State
 void InGameState::Render(Graphics2D *g)
 {
-  actor->DrawFrame(F_BIKE, SCREEN_WD2, SCREEN_HD2);
+  mainActor->Paint();
 }
 
-
+// Free The In Game 
 void InGameState::Free()
 {
-  SAFE_DEL(actor);
+  SAFE_DEL(mainActor);
+  SAFE_DEL(sprite);
 }
