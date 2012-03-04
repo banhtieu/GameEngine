@@ -224,7 +224,11 @@ void Graphics2D::ClearFrame()
   SetTransform(Matrix33::Matrix33());
   SetAlpha(1.0f);
 }
-
+void Graphics2D::Clear()
+{
+    glClearColor(0.00f, 0.00f, 0.00f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
 // Set The Transform Matrix
 void Graphics2D::SetTransform(const Matrix33 &transform)
 {

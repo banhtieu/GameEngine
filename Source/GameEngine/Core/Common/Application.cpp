@@ -26,22 +26,20 @@ void Application::Init()
 // Update the Application.
 void Application::Update()
 {
-  if (currentState)
-  {
-    currentState->Update();
-  }
+    Graphics2D *g = Graphics2D::GetInstance();
+    g->ClearFrame();
+    
+    if (currentState)
+    {
+        currentState->Update();
+        currentState->Render(g);
+    }
+
 };
 
 // Render this Application.
 void Application::Render()
 {
-  Graphics2D *g = Graphics2D::GetInstance();
-  g->ClearFrame();
-  
-  if (currentState)
-  {
-    currentState->Render(g);
-  }
 };
 
 // Free this Application

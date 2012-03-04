@@ -162,15 +162,16 @@ FileSystem *fileSystem;
 
 - (void)update
 {
-  application->Update();
+    application->Update();
+    //glClearColor(0.00f, 0.00f, 0.00f, 1.0f);
+    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    //application->Render();
+
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
-  glClearColor(0.00f, 0.00f, 0.00f, 1.0f);
-  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-  application->Render();
-  // Render Here..
+    // Render Here..
 }
 
 @end

@@ -57,7 +57,7 @@ public:
   virtual Matrix33 &GetTransform();
   
   virtual void ClearFrame();
-  
+  virtual void Clear();
   // Draw Basic Shape
   virtual void SetColor(Color color);
   virtual void DrawLine(int x1, int y1, int x2, int y2);
