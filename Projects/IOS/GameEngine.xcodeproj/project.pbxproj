@@ -101,6 +101,9 @@
 		C399354014FE613200AA4169 /* WinApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399353414FE613200AA4169 /* WinApplication.cpp */; };
 		C399354114FE613200AA4169 /* WinDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399353514FE613200AA4169 /* WinDevice.cpp */; };
 		C399354314FFB46000AA4169 /* TouchScreeniPhone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399354214FFB46000AA4169 /* TouchScreeniPhone.cpp */; };
+		C3AAF3BA1503D75F006BDB33 /* ItemInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3B91503D75F006BDB33 /* ItemInstance.cpp */; };
+		C3AAF3BE1503D9A2006BDB33 /* ShopState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3BD1503D9A2006BDB33 /* ShopState.cpp */; };
+		C3AAF3C11503DD1F006BDB33 /* ItemInventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3C01503DD1F006BDB33 /* ItemInventory.cpp */; };
 		C3C8297D14F690790001CC65 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3C8297C14F690790001CC65 /* MainMenuState.cpp */; };
 /* End PBXBuildFile section */
 
@@ -280,6 +283,12 @@
 		C399354614FFB53B00AA4169 /* TouchScreenBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchScreenBase.h; sourceTree = "<group>"; };
 		C399354814FFB86300AA4169 /* Point2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point2D.h; sourceTree = "<group>"; };
 		C399354914FFC38F00AA4169 /* Rect2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect2D.h; sourceTree = "<group>"; };
+		C3AAF3B91503D75F006BDB33 /* ItemInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ItemInstance.cpp; sourceTree = "<group>"; };
+		C3AAF3BC1503D784006BDB33 /* ItemInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemInstance.h; sourceTree = "<group>"; };
+		C3AAF3BD1503D9A2006BDB33 /* ShopState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopState.cpp; sourceTree = "<group>"; };
+		C3AAF3BF1503D9AD006BDB33 /* ShopState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopState.h; sourceTree = "<group>"; };
+		C3AAF3C01503DD1F006BDB33 /* ItemInventory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ItemInventory.cpp; sourceTree = "<group>"; };
+		C3AAF3C21503DD29006BDB33 /* ItemInventory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemInventory.h; sourceTree = "<group>"; };
 		C3C8297C14F690790001CC65 /* MainMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuState.cpp; sourceTree = "<group>"; };
 		C3C8297F14F690970001CC65 /* MainMenuState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuState.h; sourceTree = "<group>"; };
 		C3C8298014F691E30001CC65 /* LoadingState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LoadingState.cpp; sourceTree = "<group>"; };
@@ -610,8 +619,9 @@
 		37F6F42814F532B90028EDC4 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				37D6F22C14FFCD2300008965 /* Generated */,
 				C364976014F68DE400E4630A /* GameStates */,
+				C3AAF3B71503D6E0006BDB33 /* Items */,
+				37D6F22C14FFCD2300008965 /* Generated */,
 				37F6F42B14F532C70028EDC4 /* MyGame.cpp */,
 				37F6F42C14F532C70028EDC4 /* MyGame.h */,
 				37D5EBE114F68D4400ECF83F /* BackgroundData.h */,
@@ -630,6 +640,8 @@
 				C3C8297F14F690970001CC65 /* MainMenuState.h */,
 				372446F11502243300DA2202 /* InGameState.h */,
 				372446F21502247900DA2202 /* InGameState.cpp */,
+				C3AAF3BD1503D9A2006BDB33 /* ShopState.cpp */,
+				C3AAF3BF1503D9AD006BDB33 /* ShopState.h */,
 			);
 			name = GameStates;
 			path = ../../../Source/Game/GameStates;
@@ -747,6 +759,18 @@
 				C399353614FE613200AA4169 /* WinDevice.h */,
 			);
 			path = Win32;
+			sourceTree = "<group>";
+		};
+		C3AAF3B71503D6E0006BDB33 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				C3AAF3B91503D75F006BDB33 /* ItemInstance.cpp */,
+				C3AAF3BC1503D784006BDB33 /* ItemInstance.h */,
+				C3AAF3C01503DD1F006BDB33 /* ItemInventory.cpp */,
+				C3AAF3C21503DD29006BDB33 /* ItemInventory.h */,
+			);
+			name = Items;
+			path = ../../../Source/Game/Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -898,6 +922,9 @@
 				372446F01502232B00DA2202 /* b2Rope.cpp in Sources */,
 				372446F31502247900DA2202 /* InGameState.cpp in Sources */,
 				372446FB15026A2C00DA2202 /* Actor.cpp in Sources */,
+				C3AAF3BA1503D75F006BDB33 /* ItemInstance.cpp in Sources */,
+				C3AAF3BE1503D9A2006BDB33 /* ShopState.cpp in Sources */,
+				C3AAF3C11503DD1F006BDB33 /* ItemInventory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
