@@ -14,6 +14,9 @@
 
 #include "Core/Math/Matrix33.h"
 
+#include "Core/IO/Touch/Touch.h"
+#include "Core/IO/FileSystem/FileSystem.h"
+
 #include "Core/Graphics/Texture.h"
 #include "Core/Graphics/Sprite.h"
 #include "Core/Graphics/Actor.h"
@@ -23,6 +26,5 @@
 #include "Core/Common/Device.h"
 #include "Core/Common/Application.h"
 
-#include "Core/IO/FileSystem/FileSystem.h"
 
 #endif

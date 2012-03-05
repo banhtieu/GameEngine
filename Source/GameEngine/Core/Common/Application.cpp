@@ -7,7 +7,6 @@
 //
 
 #include "Engine.h"
-#include "TouchScreeniPhone.h"
 
 Application::Application():currentState(0)
 {
