@@ -84,6 +84,7 @@ void TouchManager::Update()
       if (TOUCH_CANCELLED == (*item)->GetType() || TOUCH_UP == (*item)->GetType())
       {
         touches->erase(item);
+        delete *item;
         isErase = true;
         break;
       }
