@@ -54,7 +54,6 @@
 		372446F01502232B00DA2202 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 372446C21502232B00DA2202 /* b2Rope.cpp */; };
 		372446F31502247900DA2202 /* InGameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 372446F21502247900DA2202 /* InGameState.cpp */; };
 		372446FB15026A2C00DA2202 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 372446FA15026A2B00DA2202 /* Actor.cpp */; };
-		374E515F15021A5F004E65B5 /* TouchScreenBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399354514FFB53B00AA4169 /* TouchScreenBase.cpp */; };
 		3781E2DF14F53A6E006E426E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3781E2DE14F53A6E006E426E /* libz.dylib */; };
 		3781E2E214F53F49006E426E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3781E2E114F53F49006E426E /* logo.png */; };
 		3781E2E514F53F88006E426E /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3781E2E314F53F88006E426E /* Shader.fsh */; };
@@ -78,6 +77,8 @@
 		37A1B7A114F68FB000EF7B0C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A1B7A014F68FB000EF7B0C /* background.png */; };
 		37D6F22B14FFC1CC00008965 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37D6F22A14FFC1CC00008965 /* Sprite.cpp */; };
 		37D6F22F14FFCDD600008965 /* logo.bin in Resources */ = {isa = PBXBuildFile; fileRef = 37D6F22E14FFCDD600008965 /* logo.bin */; };
+		37D9D5A71504FD1C0055A654 /* Touch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37D9D5A51504FD1C0055A654 /* Touch.cpp */; };
+		37D9D5AA1505052E0055A654 /* TouchManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37D9D5A91505052E0055A654 /* TouchManager.cpp */; };
 		37F6F3EC14F530B00028EDC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3EB14F530B00028EDC4 /* UIKit.framework */; };
 		37F6F3EE14F530B00028EDC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3ED14F530B00028EDC4 /* Foundation.framework */; };
 		37F6F3F014F530B00028EDC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F6F3EF14F530B00028EDC4 /* CoreGraphics.framework */; };
@@ -100,7 +101,6 @@
 		C399353F14FE613200AA4169 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C399353214FE613200AA4169 /* ViewController.mm */; };
 		C399354014FE613200AA4169 /* WinApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399353414FE613200AA4169 /* WinApplication.cpp */; };
 		C399354114FE613200AA4169 /* WinDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399353514FE613200AA4169 /* WinDevice.cpp */; };
-		C399354314FFB46000AA4169 /* TouchScreeniPhone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399354214FFB46000AA4169 /* TouchScreeniPhone.cpp */; };
 		C3AAF3BA1503D75F006BDB33 /* ItemInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3B91503D75F006BDB33 /* ItemInstance.cpp */; };
 		C3AAF3BE1503D9A2006BDB33 /* ShopState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3BD1503D9A2006BDB33 /* ShopState.cpp */; };
 		C3AAF3C11503DD1F006BDB33 /* ItemInventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3C01503DD1F006BDB33 /* ItemInventory.cpp */; };
@@ -236,6 +236,10 @@
 		37D6F22A14FFC1CC00008965 /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
 		37D6F22D14FFCD3500008965 /* logo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = logo.h; path = ../../../Binary/logo.h; sourceTree = "<group>"; };
 		37D6F22E14FFCDD600008965 /* logo.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = logo.bin; path = ../../../Binary/logo.bin; sourceTree = "<group>"; };
+		37D9D5A51504FD1C0055A654 /* Touch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Touch.cpp; path = Touch/Touch.cpp; sourceTree = "<group>"; };
+		37D9D5A61504FD1C0055A654 /* Touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Touch.h; path = Touch/Touch.h; sourceTree = "<group>"; };
+		37D9D5A8150503400055A654 /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchManager.h; path = Touch/TouchManager.h; sourceTree = "<group>"; };
+		37D9D5A91505052E0055A654 /* TouchManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchManager.cpp; sourceTree = "<group>"; };
 		37F6F3E714F530B00028EDC4 /* GameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F6F3EB14F530B00028EDC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37F6F3ED14F530B00028EDC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -277,10 +281,6 @@
 		C399353414FE613200AA4169 /* WinApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WinApplication.cpp; sourceTree = "<group>"; };
 		C399353514FE613200AA4169 /* WinDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WinDevice.cpp; sourceTree = "<group>"; };
 		C399353614FE613200AA4169 /* WinDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinDevice.h; sourceTree = "<group>"; };
-		C399354214FFB46000AA4169 /* TouchScreeniPhone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchScreeniPhone.cpp; sourceTree = "<group>"; };
-		C399354414FFB4BF00AA4169 /* TouchScreeniPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchScreeniPhone.h; sourceTree = "<group>"; };
-		C399354514FFB53B00AA4169 /* TouchScreenBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TouchScreenBase.cpp; sourceTree = "<group>"; };
-		C399354614FFB53B00AA4169 /* TouchScreenBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchScreenBase.h; sourceTree = "<group>"; };
 		C399354814FFB86300AA4169 /* Point2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point2D.h; sourceTree = "<group>"; };
 		C399354914FFC38F00AA4169 /* Rect2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect2D.h; sourceTree = "<group>"; };
 		C3AAF3B91503D75F006BDB33 /* ItemInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ItemInstance.cpp; sourceTree = "<group>"; };
@@ -521,6 +521,17 @@
 			name = Generated;
 			sourceTree = "<group>";
 		};
+		37D9D5A41504FD120055A654 /* Touch */ = {
+			isa = PBXGroup;
+			children = (
+				37D9D5A51504FD1C0055A654 /* Touch.cpp */,
+				37D9D5A61504FD1C0055A654 /* Touch.h */,
+				37D9D5A8150503400055A654 /* TouchManager.h */,
+				37D9D5A91505052E0055A654 /* TouchManager.cpp */,
+			);
+			name = Touch;
+			sourceTree = "<group>";
+		};
 		37F6F3DC14F530B00028EDC4 = {
 			isa = PBXGroup;
 			children = (
@@ -693,8 +704,8 @@
 		C399352314FE613200AA4169 /* IO */ = {
 			isa = PBXGroup;
 			children = (
+				37D9D5A41504FD120055A654 /* Touch */,
 				C399352414FE613200AA4169 /* FileSystem */,
-				C399352714FE613200AA4169 /* TouchScreen */,
 			);
 			path = IO;
 			sourceTree = "<group>";
@@ -706,17 +717,6 @@
 				C399352614FE613200AA4169 /* FileSystem.h */,
 			);
 			path = FileSystem;
-			sourceTree = "<group>";
-		};
-		C399352714FE613200AA4169 /* TouchScreen */ = {
-			isa = PBXGroup;
-			children = (
-				C399354514FFB53B00AA4169 /* TouchScreenBase.cpp */,
-				C399354614FFB53B00AA4169 /* TouchScreenBase.h */,
-				C399354214FFB46000AA4169 /* TouchScreeniPhone.cpp */,
-				C399354414FFB4BF00AA4169 /* TouchScreeniPhone.h */,
-			);
-			path = TouchScreen;
 			sourceTree = "<group>";
 		};
 		C399352814FE613200AA4169 /* Math */ = {
@@ -842,7 +842,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				374E515F15021A5F004E65B5 /* TouchScreenBase.cpp in Sources */,
 				37F6F3FC14F530B00028EDC4 /* main.m in Sources */,
 				37F6F42E14F532C70028EDC4 /* MyGame.cpp in Sources */,
 				3781E30214F5415D006E426E /* png.c in Sources */,
@@ -874,7 +873,6 @@
 				C399354014FE613200AA4169 /* WinApplication.cpp in Sources */,
 				C399354114FE613200AA4169 /* WinDevice.cpp in Sources */,
 				37D6F22B14FFC1CC00008965 /* Sprite.cpp in Sources */,
-				C399354314FFB46000AA4169 /* TouchScreeniPhone.cpp in Sources */,
 				372446C41502232B00DA2202 /* b2BroadPhase.cpp in Sources */,
 				372446C51502232B00DA2202 /* b2CollideCircle.cpp in Sources */,
 				372446C61502232B00DA2202 /* b2CollideEdge.cpp in Sources */,
@@ -925,6 +923,8 @@
 				C3AAF3BA1503D75F006BDB33 /* ItemInstance.cpp in Sources */,
 				C3AAF3BE1503D9A2006BDB33 /* ShopState.cpp in Sources */,
 				C3AAF3C11503DD1F006BDB33 /* ItemInventory.cpp in Sources */,
+				37D9D5A71504FD1C0055A654 /* Touch.cpp in Sources */,
+				37D9D5AA1505052E0055A654 /* TouchManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

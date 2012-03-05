@@ -10,6 +10,7 @@
 
 Application::Application():currentState(0)
 {
+  new TouchManager();
 };
 
 Application::~Application()

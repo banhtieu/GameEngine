@@ -52,13 +52,10 @@ public:
   // is Just Touch Up
   virtual bool IsJustUp();
   
-private:
   // the current Data
   TouchData data;
-  
   // last Data
   TouchData lastData;
-  
   // touch id
   int touchId;
 };
