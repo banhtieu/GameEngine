@@ -49,9 +49,9 @@ public:
   virtual void SetAlpha(float alpha);
   
   virtual void FreeTexture(Texture *texture);
-  virtual void DrawTexture(Texture *texture, int dx, int dy, const Frame2D &frame);
-  virtual void DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h);
-  virtual void DrawTexture(Texture *texture, int x, int y, int nVertices, float *vertices, float *texcoord);
+  virtual void DrawTexture(Texture *texture, float dx, float dy, const Frame2D &frame);
+  virtual void DrawTexture(Texture *texture, float dx, float dy, int x, int y, int w, int h);
+  virtual void DrawTexture(Texture *texture, float x, float y, int nVertices, float *vertices, float *texcoord);
   virtual void SetTransform(const Matrix33 &transform);
   virtual void ConcatTrasform(const Matrix33 &addtional);
   virtual Matrix33 &GetTransform();
@@ -60,12 +60,12 @@ public:
   virtual void Clear();
   // Draw Basic Shape
   virtual void SetColor(Color color);
-  virtual void DrawLine(int x1, int y1, int x2, int y2);
-  virtual void DrawRectangle(int x, int y, int w, int h);
-  virtual void DrawCirle(int x, int y, int r);
+  virtual void DrawLine(float x1, float y1, float x2, float y2);
+  virtual void DrawRectangle(float x, float y, float w, float h);
+  virtual void DrawCirle(float x, float y, float r);
   
-  virtual void FillRectange(int x, int y, int w, int h);
-  virtual void FillCircle(int x, int y, int r);
+  virtual void FillRectange(float x, float y, float w, float h);
+  virtual void FillCircle(float x, float y, float r);
   
   virtual void Save();
   virtual void Restore();

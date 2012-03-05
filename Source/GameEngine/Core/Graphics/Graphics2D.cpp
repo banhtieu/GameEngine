@@ -138,13 +138,13 @@ void Graphics2D::FreeTexture(Texture *texture)
 }
 
 // Draw Texture With Frame
-void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, const Frame2D &frame)
+void Graphics2D::DrawTexture(Texture *texture, float dx, float dy, const Frame2D &frame)
 {
   DrawTexture(texture, dx, dy, frame.x, frame.y, frame.w, frame.h);
 }
 
 // Draw Texture
-void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int w, int h)
+void Graphics2D::DrawTexture(Texture *texture, float dx, float dy, int x, int y, int w, int h)
 {
   SetTexture(texture);
   
@@ -190,7 +190,7 @@ void Graphics2D::DrawTexture(Texture *texture, int dx, int dy, int x, int y, int
 }
 
 // Draw Texture with vertices and Texcoord
-void Graphics2D::DrawTexture(Texture *texture, int x, int y, int nVertices, float *vertices, float *texcoord)
+void Graphics2D::DrawTexture(Texture *texture, float x, float y, int nVertices, float *vertices, float *texcoord)
 {
   SetTexture(texture);
   
@@ -255,7 +255,7 @@ void Graphics2D::SetColor(Color color)
 }
 
 // Draw a Line
-void Graphics2D::DrawLine(int x1, int y1, int x2, int y2)
+void Graphics2D::DrawLine(float x1, float y1, float x2, float y2)
 {
   float vertices[] = {x1, y1, x2, y2};
   
@@ -275,7 +275,7 @@ void Graphics2D::DrawLine(int x1, int y1, int x2, int y2)
   
 }
 
-void Graphics2D::DrawRectangle(int x, int y, int w, int h)
+void Graphics2D::DrawRectangle(float x, float y, float w, float h)
 {
   float vertices[] = {x, y, x + w, y, x + w, y + h, x, y + h};
   
@@ -295,7 +295,7 @@ void Graphics2D::DrawRectangle(int x, int y, int w, int h)
 }
 
 // Draw the Circle
-void Graphics2D::DrawCirle(int x, int y, int r)
+void Graphics2D::DrawCirle(float x, float y, float r)
 {
   float vertices[36];
   float step = (float) M_PI / 8;
@@ -321,7 +321,7 @@ void Graphics2D::DrawCirle(int x, int y, int r)
   
 }
 
-void Graphics2D::FillRectange(int x, int y, int w, int h)
+void Graphics2D::FillRectange(float x, float y, float w, float h)
 {
   float vertices[] = {x, y, x + w, y, x, y + h, x + w, y + h};
   
@@ -341,7 +341,7 @@ void Graphics2D::FillRectange(int x, int y, int w, int h)
 }
 
 // Fill the circle...
-void Graphics2D::FillCircle(int x, int y, int r)
+void Graphics2D::FillCircle(float x, float y, float r)
 {
   float vertices[38];
   float step = (float) M_PI / 8;
