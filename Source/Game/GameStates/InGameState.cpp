@@ -57,6 +57,16 @@ void InGameState::Render(Graphics2D *g)
     }
   }
   g->Restore();
+  TouchList *touches = TouchManager::GetInstance()->GetTouches();
+  
+  g->SetColor(Color(1.0f, 0.0f, 0.0f, 1.0f));
+  if (touches)
+  {
+    for (TouchList::iterator item = touches->begin(); item != touches->end(); item++)
+    {
+      g->FillCircle((*item)->GetX(), (*item)->GetY(), 150);
+    }
+  }
 }
 
 // Free The In Game 

@@ -25,20 +25,16 @@ public:
   ~TouchManager();
   
   // Begin Transfer Touches
-  virtual void BeginTransferTouches();
   virtual void AddTouch(int touchId, int x, int y, int type);
-  // End Transfer Touches
-  virtual void EndTransferTouches();
+  // Update Touches
+  virtual void Update();
   
-  // void Update Touch
-  virtual void UpdateTouches(TouchList* newTouches);
   virtual TouchList* GetTouches();
   virtual int GetNumberOfTouches();
   virtual bool IsTouchInRect(int x, int y, int w, int h);
   
 private:
   TouchList *touches;
-  TouchList *newTouches;
 };
 
 

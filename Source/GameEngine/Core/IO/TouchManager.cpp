@@ -8,8 +8,9 @@
 
 #include "Engine.h"
 
-TouchManager::TouchManager():touches(NULL)
+TouchManager::TouchManager()
 {
+  touches = new TouchList;
 }
 
 
@@ -35,34 +36,6 @@ int TouchManager::GetNumberOfTouches()
   return touches->size();
 }
 
-// Update touches
-void TouchManager::UpdateTouches(TouchList *newTouches)
-{
-  if (touches)
-  {
-    for (TouchList::iterator item = newTouches->begin(); item != newTouches->end(); item++)
-    {
-      for (TouchList::iterator oldItem = touches->begin(); oldItem != touches->end(); oldItem++)
-      {
-        if ((*item)->GetTouchId() == (*oldItem)->GetTouchId())
-        {
-          (*item)->lastData = (*oldItem)->data;
-          break;
-        }
-      }
-    }
-  
-  
-    for (TouchList::iterator item = touches->begin(); item != touches->end(); item++)
-    {
-      delete *item;
-    }
-  
-    delete touches;
-  }
-  
-  touches = newTouches;
-}
 
 // Check any touch in Rectangle
 bool TouchManager::IsTouchInRect(int x, int y, int w, int h)
@@ -77,21 +50,44 @@ bool TouchManager::IsTouchInRect(int x, int y, int w, int h)
   return false;
 }
 
-// Transfer Touches
-void TouchManager::BeginTransferTouches()
-{
-  newTouches = new TouchList();
-}
-
 // Add Touch
 void TouchManager::AddTouch(int touchId, int x, int y, int type)
 {
-  Touch *touch = new Touch(touchId, x, y, type);
-  newTouches->push_back(touch);
+  if (type == TOUCH_DOWN)
+  {
+    touches->push_back(new Touch(touchId, x, y, type));
+  }
+  else
+  {
+    for (TouchList::iterator item = touches->begin(); item != touches->end(); item++)
+    {
+      if (touchId == (*item)->GetTouchId())
+      {
+        (*item)->lastData = (*item)->data;
+        (*item)->data.x = x;
+        (*item)->data.y = y;
+        (*item)->data.type = type;
+      }
+    }
+  }
 }
 
 // Update Touch events
-void TouchManager::EndTransferTouches()
+void TouchManager::Update()
 {
-  this->UpdateTouches(newTouches);
+  bool isErase = true;
+  while (isErase) 
+  {
+    isErase = false;
+    for (TouchList::iterator item = touches->begin(); item != touches->end(); item++)
+    {
+      if (TOUCH_CANCELLED == (*item)->GetType() || TOUCH_UP == (*item)->GetType())
+      {
+        touches->erase(item);
+        isErase = true;
+        break;
+      }
+    }
+  }
+  
 }

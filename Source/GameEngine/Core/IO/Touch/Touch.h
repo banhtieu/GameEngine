@@ -15,7 +15,7 @@ enum TouchEventType
   TOUCH_NONE,
   TOUCH_DOWN,
   TOUCH_MOVE,
-  TOUCH_CANCLED,
+  TOUCH_CANCELLED,
   TOUCH_UP
 };
 
