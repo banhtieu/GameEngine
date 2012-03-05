@@ -10,7 +10,7 @@
 #include "LogoState.h"
 #include "InGameState.h"
 #include <Box2D/Box2D.h>
-#include "ShopState.h"
+#include "ItemShopState.h"
 void MyGame::Init()
 {
   SwitchState(new InGameState());

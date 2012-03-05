@@ -102,7 +102,7 @@
 		C399354114FE613200AA4169 /* WinDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399353514FE613200AA4169 /* WinDevice.cpp */; };
 		C399354314FFB46000AA4169 /* TouchScreeniPhone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399354214FFB46000AA4169 /* TouchScreeniPhone.cpp */; };
 		C3AAF3BA1503D75F006BDB33 /* ItemInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3B91503D75F006BDB33 /* ItemInstance.cpp */; };
-		C3AAF3BE1503D9A2006BDB33 /* ShopState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3BD1503D9A2006BDB33 /* ShopState.cpp */; };
+		C3AAF3BE1503D9A2006BDB33 /* ItemShopState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3BD1503D9A2006BDB33 /* ItemShopState.cpp */; };
 		C3AAF3C11503DD1F006BDB33 /* ItemInventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AAF3C01503DD1F006BDB33 /* ItemInventory.cpp */; };
 		C3C8297D14F690790001CC65 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3C8297C14F690790001CC65 /* MainMenuState.cpp */; };
 /* End PBXBuildFile section */
@@ -285,8 +285,8 @@
 		C399354914FFC38F00AA4169 /* Rect2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect2D.h; sourceTree = "<group>"; };
 		C3AAF3B91503D75F006BDB33 /* ItemInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ItemInstance.cpp; sourceTree = "<group>"; };
 		C3AAF3BC1503D784006BDB33 /* ItemInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemInstance.h; sourceTree = "<group>"; };
-		C3AAF3BD1503D9A2006BDB33 /* ShopState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShopState.cpp; sourceTree = "<group>"; };
-		C3AAF3BF1503D9AD006BDB33 /* ShopState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopState.h; sourceTree = "<group>"; };
+		C3AAF3BD1503D9A2006BDB33 /* ItemShopState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ItemShopState.cpp; sourceTree = "<group>"; };
+		C3AAF3BF1503D9AD006BDB33 /* ItemShopState.h */ = {isa = PBXFileReference; path = ItemShopState.h; sourceTree = "<group>"; };
 		C3AAF3C01503DD1F006BDB33 /* ItemInventory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ItemInventory.cpp; sourceTree = "<group>"; };
 		C3AAF3C21503DD29006BDB33 /* ItemInventory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemInventory.h; sourceTree = "<group>"; };
 		C3C8297C14F690790001CC65 /* MainMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuState.cpp; sourceTree = "<group>"; };
@@ -640,8 +640,8 @@
 				C3C8297F14F690970001CC65 /* MainMenuState.h */,
 				372446F11502243300DA2202 /* InGameState.h */,
 				372446F21502247900DA2202 /* InGameState.cpp */,
-				C3AAF3BD1503D9A2006BDB33 /* ShopState.cpp */,
-				C3AAF3BF1503D9AD006BDB33 /* ShopState.h */,
+				C3AAF3BD1503D9A2006BDB33 /* ItemShopState.cpp */,
+				C3AAF3BF1503D9AD006BDB33 /* ItemShopState.h */,
 			);
 			name = GameStates;
 			path = ../../../Source/Game/GameStates;
@@ -923,7 +923,7 @@
 				372446F31502247900DA2202 /* InGameState.cpp in Sources */,
 				372446FB15026A2C00DA2202 /* Actor.cpp in Sources */,
 				C3AAF3BA1503D75F006BDB33 /* ItemInstance.cpp in Sources */,
-				C3AAF3BE1503D9A2006BDB33 /* ShopState.cpp in Sources */,
+				C3AAF3BE1503D9A2006BDB33 /* ItemShopState.cpp in Sources */,
 				C3AAF3C11503DD1F006BDB33 /* ItemInventory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

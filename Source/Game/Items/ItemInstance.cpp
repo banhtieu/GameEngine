@@ -7,3 +7,26 @@
 //
 
 #include "ItemInstance.h"
+
+Sprite *ItemInstance::spriteItems = NULL;
+
+ItemInstance::ItemInstance(int type)
+{
+    itemId = type;
+    if(ItemInstance::spriteItems ==  NULL)
+    {
+        Texture *spriteTexture = Texture::LoadTexturePNG("itemList.png");
+        ItemInstance::spriteItems = new Sprite("itemList");
+    }
+}
+
+void ItemInstance::SetPosition(int x, int y)
+{
+    posX = x;
+    posY = y;
+}
+
+void ItemInstance::Paint()
+{
+    Graphics2D *g = Graphics2D::GetInstance();
+}

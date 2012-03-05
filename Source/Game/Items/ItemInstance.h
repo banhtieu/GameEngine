@@ -8,6 +8,7 @@
 
 #ifndef GameEngine_ItemInstance_h
 #define GameEngine_ItemInstance_h
+#include "Engine.h"
 
 // Item Type
 enum ItemType {
@@ -21,16 +22,23 @@ enum ItemType {
 class ItemInstance
 {
 public:
+    static Sprite *spriteItems;
+    
     ItemInstance(int type);
     ~ItemInstance();
-    void Paint(int x, int y);
+    void SetPosition(int x, int y);
+    void Price(int price);
+    void Paint();
     
 public:
     int itemId;
     int itemPrice;
+    int posX;
+    int posY;
     bool isUnlocked;
     bool isBought;
     char* objectiveUnlock;
     char* capability;
 };
+
 #endif
