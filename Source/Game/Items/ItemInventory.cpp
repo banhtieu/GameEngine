@@ -13,17 +13,17 @@ ItemInventory::ItemInventory()
     
 }
 
-void ItemInventory::LoadInventory()
+void ItemInventory::LoadInventory(const char *filename)
 {
     
 }
 
-void ItemInventory::SaveInventory()
+void ItemInventory::SaveInventory(const char *filename)
 {
     
 }
 
-void ItemInventory::PaintInventory(int startID, int endId)
+void ItemInventory::PaintInventory(int shopId,int startID, int endId)
 {
   for (int i = startID; i < endId; i++)
   {

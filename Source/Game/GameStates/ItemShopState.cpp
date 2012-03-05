@@ -7,3 +7,19 @@
 //
 
 #include "ItemShopState.h"
+
+void ItemShopState::Init()
+{
+  itemInv = new ItemInventory();
+  itemInv->LoadInventory("");
+}
+
+void ItemShopState::Render(Graphics2D *g)
+{
+  itemInv->PaintInventory(shopId);
+};
+
+void ItemShopState::Update()
+{
+  
+}

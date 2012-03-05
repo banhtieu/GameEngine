@@ -10,23 +10,35 @@
 
 Sprite *ItemInstance::spriteItems = NULL;
 
-ItemInstance::ItemInstance(int type)
+ItemInstance::ItemInstance()
 {
-    itemId = type;
-    if(ItemInstance::spriteItems ==  NULL)
-    {
-        Texture *spriteTexture = Texture::LoadTexturePNG("itemList.png");
-        ItemInstance::spriteItems = new Sprite("itemList");
-    }
+  if(ItemInstance::spriteItems ==  NULL)
+  {
+    Texture *spriteTexture = Texture::LoadTexturePNG("itemList.png");
+    ItemInstance::spriteItems = new Sprite("itemList");
+  }
 }
 
 void ItemInstance::SetPosition(int x, int y)
 {
-    posX = x;
-    posY = y;
+  posX = x;
+  posY = y;
+}
+
+void ItemInstance::SetPrice(int price)
+{
+  itemPrice = price;
 }
 
 void ItemInstance::Paint()
 {
-    Graphics2D *g = Graphics2D::GetInstance();
+  Graphics2D *g = Graphics2D::GetInstance();
+  if(isUnlocked)
+  {
+  
+  }
+ // if()
+  {
+    
+  }
 }

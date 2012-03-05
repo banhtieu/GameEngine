@@ -10,5 +10,26 @@
 #define GameEngine_ItemShopState_h
 #include "ItemInventory.h"
 
+#include "Engine.h"
+
+enum ShopType {
+  SHOP_SUPPORT,// hổ trợ
+  SHOP_TEAT,   // núm vú
+  SHOP_DIAPER, // tả lót
+  SHOP_WEAPON  // vũ khí
+};
+
+
+class ItemShopState: public State, Singleton<ItemShopState>
+{
+public:
+  ItemInventory *itemInv;
+  int shopId;
+public:
+  virtual void Init();
+  virtual void Render(Graphics2D *g);
+  virtual void Update();
+protected:
+};
 
 #endif

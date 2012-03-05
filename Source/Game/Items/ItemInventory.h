@@ -8,8 +8,11 @@
 
 #ifndef GameEngine_ItemInventory_h
 #define GameEngine_ItemInventory_h
+
 #include "ItemInstance.h"
-#define ITEM_COUNT 18
+
+#define ITEM_COUNT 24
+
 class ItemInventory
 {
     
@@ -17,9 +20,9 @@ public:
     ItemInventory();
     ~ItemInventory();
 public:
-    void LoadInventory();
-    void SaveInventory();
-    void PaintInventory(int startId, int endId);
+    void LoadInventory(const char *filename);
+    void SaveInventory(const char *filename);
+    void PaintInventory(int shopId, int startId = 0, int endId = 0);
 public:
     ItemInstance *itemList[ITEM_COUNT];
 };
