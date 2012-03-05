@@ -60,6 +60,8 @@ public:
   bool isSelecting;
   char* objectiveUnlock;
   char* capability;
+  
+  ItemAbility itemAbility;
 };
 
 #endif
