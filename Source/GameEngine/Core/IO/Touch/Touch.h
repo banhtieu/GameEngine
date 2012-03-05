@@ -15,7 +15,7 @@ enum TouchEventType
   TOUCH_NONE,
   TOUCH_DOWN,
   TOUCH_MOVE,
-  TOUCH_CANCLED,
+  TOUCH_CANCELLED,
   TOUCH_UP
 };
 
@@ -52,6 +52,7 @@ public:
   // is Just Touch Up
   virtual bool IsJustUp();
   
+<<<<<<< HEAD
 private:
   // the current Data
   TouchData data;
@@ -59,6 +60,12 @@ private:
   // last Data
   TouchData lastData;
   
+=======
+  // the current Data
+  TouchData data;
+  // last Data
+  TouchData lastData;
+>>>>>>> master
   // touch id
   int touchId;
 };

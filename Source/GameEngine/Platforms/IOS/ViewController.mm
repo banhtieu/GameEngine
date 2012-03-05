@@ -9,7 +9,7 @@
 
 #import "MyGame.h"
 #import "IOSDevice.h"
-#include "../../Core/IO/TouchScreen/TouchScreenIPhone.h"
+#import "TouchManager.h"
 
 @interface ViewController () 
 
@@ -42,7 +42,7 @@ FileSystem *fileSystem;
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  
+  [self.view setMultipleTouchEnabled:YES];
   self.context = [[[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2] autorelease];
 
   if (!self.context) {
@@ -88,47 +88,54 @@ FileSystem *fileSystem;
 // Handles the start of a touch
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    CGRect				bounds;// = [self bounds];
-	//UITouch*			touch = [[event touchesForView:self] anyObject];
-	
-	for (UITouch *touch in touches) {
-        CGPoint iPoint = [touch locationInView:NULL];
-		{
-            CGPoint iPointLast = [touch previousLocationInView:NULL];
-        }
+  TouchManager *touchManager = TouchManager::GetInstance();
+  NSLog(@"Number of Touches: %d", [touches count]);
+  for (UITouch *touch in touches)
+  {
+    CGPoint location = [touch locationInView:self.view];
+    int type = TOUCH_NONE;
+    if ([touch phase] == UITouchPhaseBegan)
+    {
+      type = TOUCH_DOWN;
     }
+    else if ([touch phase] == UITouchPhaseEnded)
+    {
+      type = TOUCH_UP;
+    }
+    else if ([touch phase] == UITouchPhaseMoved)
+    {
+      type = TOUCH_MOVE;
+    }
+    else if ([touch phase] == UITouchPhaseCancelled)
+    {
+        type = TOUCH_CANCELLED;
+    }
+    
+    NSLog(@"id & type: %ld - %d", (long) touch, type);
+    
+    touchManager->AddTouch((long) touch, location.x * 2, location.y * 2, type);
+  }
     
 }
 
 // Handles the continuation of a touch.
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{  
-	
-
-	for (UITouch *touch in touches) {
-        
-
-	}
-
+{
+  [self touchesBegan:touches withEvent:event];
 }
 
 // Handles the end of a touch event when the touch is a tap.
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	for (UITouch *touch in touches) {
-        
-	
-	}
+  [self touchesBegan:touches withEvent:event];  
 }
 
 // Handles the end of a touch event.
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{	
-	for (UITouch *touch in touches) 
-	{
-
-	}
+{
+  [self touchesBegan:touches withEvent:event];
 }
+
 - (void)setupGL
 {
   [EAGLContext setCurrentContext:self.context];
@@ -160,12 +167,15 @@ FileSystem *fileSystem;
 
 #pragma mark - GLKView and GLKViewController delegate methods
 
-- (void)update
+- (void) update
 {
-    application->Update();
-    //glClearColor(0.00f, 0.00f, 0.00f, 1.0f);
-    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    //application->Render();
+  
+  application->Update();
+  TouchManager::GetInstance()->Update();
+
+  //glClearColor(0.00f, 0.00f, 0.00f, 1.0f);
+  //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  //application->Render();
 
 }
 
