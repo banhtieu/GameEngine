@@ -10,6 +10,7 @@
 #define GameEngine_InGameState_h
 
 #include "Engine.h"
+#include "Box2D/Box2D.h"
 
 class InGameState:public State, Singleton<InGameState>
 {
@@ -18,9 +19,14 @@ public:
   virtual void Render(Graphics2D *g);
   virtual void Update();
   virtual void Free();
+  
+  virtual void CreateWorld();
+  virtual void AddGround();
 protected:
   Sprite *sprite;
   Actor *mainActor;
+  b2World *world;
+  
 };
 
 
