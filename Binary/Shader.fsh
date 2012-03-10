@@ -10,6 +10,7 @@ varying highp vec2 texcoordVarying;
 
 uniform bool useColor;
 uniform bool useTexture;
+uniform bool isDrawString;
 uniform sampler2D texture;
 uniform highp float alphaBlender;
 uniform highp vec4 colorUniform;
@@ -24,6 +25,12 @@ void main()
   }
   
   result = result + texture2D(texture, texcoordVarying);
+  
+  if (isDrawString)
+  {
+    result.rgb = colorUniform.rgb;
+  }
+  
   result.a = alphaBlender * result.a;
   
   gl_FragColor = result;

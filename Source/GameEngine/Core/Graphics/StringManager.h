@@ -28,11 +28,13 @@ public:
   virtual Frame2D GetBound(int index);
   virtual Frame2D GetBound(unsigned char *data);
   virtual void FreeData();
+  virtual void SetColor(Color color);
   
 protected:
   int numStrings; // number of Strings;
   unsigned char **strings; // string data;
   Sprite sprite; // Texture Sprite;
+  Color textColor;
 };
 
 

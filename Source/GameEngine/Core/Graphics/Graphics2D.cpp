@@ -54,6 +54,7 @@ void Graphics2D::Init()
   uniforms[USE_COLOR] = glGetUniformLocation(programId, "useColor");
   uniforms[COLOR] = glGetUniformLocation(programId, "colorUniform");
   uniforms[MATRIX] = glGetUniformLocation(programId, "matrix");
+  uniforms[IS_DRAW_STRING] = glGetUniformLocation(programId, "isDrawString");
   
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -183,6 +184,7 @@ void Graphics2D::DrawTexture(Texture *texture, float dx, float dy, int x, int y,
   
   glUniformMatrix3fv(uniforms[MATRIX], 1, GL_FALSE, (float *) result.value.m);
   glUniform1i(uniforms[USE_COLOR], 0);
+  glUniform4f(uniforms[COLOR], color.r, color.g, color.b, color.a);
   glUniform1f(uniforms[ALPHA], alphaBlender);
   
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
@@ -378,4 +380,10 @@ void Graphics2D::Save()
 void Graphics2D::Restore()
 {
   SetTransform(savedMatrices[--currentLevel]);
+}
+
+// Set is Drawing String or Not
+void Graphics2D::SetIsDrawString(bool isDrawString)
+{
+  glUniform1i(uniforms[IS_DRAW_STRING], isDrawString);
 }

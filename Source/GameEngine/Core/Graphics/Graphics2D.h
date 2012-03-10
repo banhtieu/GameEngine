@@ -13,7 +13,7 @@
 enum { ATTRIB_POSITION, ATTRIB_COLOR, ATTRIB_TEXCOORD };
 
 // All uniform here.
-enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, MATRIX, COLOR, NUM_UNIFORMS};
+enum { USE_COLOR, USE_TEXTURE, TEXTURE, ALPHA, MATRIX, COLOR, IS_DRAW_STRING, NUM_UNIFORMS};
 
 // Number of Matrix Level
 #define NUM_MATRIX_LEVELS 20
@@ -69,6 +69,8 @@ public:
   
   virtual void Save();
   virtual void Restore();
+  
+  virtual void SetIsDrawString(bool isDrawString);
   
 protected:
   unsigned int programId;
