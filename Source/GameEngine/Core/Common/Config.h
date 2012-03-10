@@ -20,8 +20,8 @@
 
 #define LIMIT_FPS 60
 
-#define LOGI(...) printf(__VA_ARGS__)
-#define LOGE(...) printf(__VA_ARGS__)
+#define LOGI(...) printf(__VA_ARGS__); printf("\n")
+#define LOGE(...) printf(__VA_ARGS__); printf("\n")
 #define SAFE_DEL(p) if(p) delete p; p = 0;
 #define SAFE_DEL_ARRAY(p) if(p) delete []p; p = 0;
 

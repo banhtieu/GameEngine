@@ -22,9 +22,7 @@ Sprite::Sprite(const char *name):modules(NULL), frames(NULL), nModules(0), nFram
 // Unfinished a sprite
 Sprite::~Sprite()
 {
-  SAFE_DEL_ARRAY(modules);
-  SAFE_DEL_ARRAY(frames);
-  SAFE_DEL(texture);
+  FreeData();
 }
 
 
@@ -92,3 +90,22 @@ void Sprite::DrawModule(int module, int x, int y)
   }
 }
 
+// Get The Module Width
+int Sprite::GetModuleWidth(int module)
+{
+  return modules[module].width;
+}
+
+// Get Module height
+int Sprite::GetModuleHeight(int module)
+{
+  return modules[module].height;
+}
+
+// Free all data
+void Sprite::FreeData()
+{
+  SAFE_DEL_ARRAY(modules);
+  SAFE_DEL_ARRAY(frames);
+  SAFE_DEL(texture);
+}

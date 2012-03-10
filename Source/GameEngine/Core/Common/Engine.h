@@ -21,6 +21,7 @@
 #include "Core/Graphics/Sprite.h"
 #include "Core/Graphics/Actor.h"
 #include "Core/Graphics/Graphics2D.h"
+#include "Core/Graphics/StringManager.h"
 
 #include "Core/Common/State.h"
 #include "Core/Common/Device.h"

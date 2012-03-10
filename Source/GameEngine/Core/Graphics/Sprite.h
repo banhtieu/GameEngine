@@ -33,11 +33,14 @@ class Sprite
 public:
   Sprite();
   Sprite(const char *name);
-  ~Sprite();
-  void LoadSprite(const char *name);
-  void LoadSprite(FILE *fp);
-  void DrawFrame(int frame, int x, int y);
-  void DrawModule(int module, int x, int y);
+  virtual ~Sprite();
+  virtual void LoadSprite(const char *name);
+  virtual void LoadSprite(FILE *fp);
+  virtual void DrawFrame(int frame, int x, int y);
+  virtual void DrawModule(int module, int x, int y);
+  virtual int GetModuleWidth(int module);
+  virtual int GetModuleHeight(int module);
+  virtual void FreeData();
 protected:
   Texture *texture;
   Module *modules;

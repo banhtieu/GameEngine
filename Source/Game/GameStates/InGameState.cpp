@@ -8,6 +8,7 @@
 
 #include "InGameState.h"
 #include "logo.h"
+#include "Strings.h"
 #include "BackgroundData.h"
 #include <Box2D/Box2D.h>
 
@@ -21,6 +22,8 @@ void InGameState::Init()
   mainActor->SetFlippedY(true);
   mainActor->SetFlippedX(false);
   
+  stringManager = new StringManager();
+  stringManager->Load("strings.en.bin");
 // Init 
   CreateWorld();
 }
@@ -44,7 +47,6 @@ void InGameState::Update()
 // Render the InGame State
 void InGameState::Render(Graphics2D *g)
 {
-  
   // Draw Background
   for (int i = 0; i < SCREEN_W; i+= bgFrameData[CLOUD1].w * 2)
   {
@@ -64,6 +66,7 @@ void InGameState::Render(Graphics2D *g)
     g->DrawTexture(background, i + bgFrameData[FRONT1].w, 0, bgFrameData[FRONT2]);
   }
   
+  stringManager->Draw(COPYRIGHT, 10, 10);
   g->Save();
   g->ConcatTrasform(Matrix33::TranslateMatrix(SCREEN_WD2 - bicycle->GetPosition().x * 10, SCREEN_HD2 + 200) * Matrix33::ScaleMatrix(1.0f, -1.0f));
   

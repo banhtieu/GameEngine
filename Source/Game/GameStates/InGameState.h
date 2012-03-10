@@ -31,6 +31,7 @@ protected:
   b2Body *bicycle;
   b2Body *wheel1;
   b2Body *wheel2;
+  StringManager *stringManager;
   
 };
 
