@@ -21,11 +21,16 @@ public:
   virtual void Free();
   
   virtual void CreateWorld();
-  virtual void AddGround();
+  virtual void AddGround(float x, float y, float alpha = 0.0f);
+  virtual void AddBicycle();
 protected:
   Sprite *sprite;
+  Texture *background;
   Actor *mainActor;
   b2World *world;
+  b2Body *bicycle;
+  b2Body *wheel1;
+  b2Body *wheel2;
   
 };
 

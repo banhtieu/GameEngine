@@ -27,14 +27,10 @@ Sprite::~Sprite()
   SAFE_DEL(texture);
 }
 
-void Sprite::LoadSprite(const char *name)
+
+// Load Sprite From File
+void Sprite::LoadSprite(FILE *fp)
 {
-  char fileName[255];
-  sprintf(fileName, "%s.png", name);
-  texture = Texture::LoadTexturePNG(fileName);
-  
-  sprintf(fileName, "%s.bin", name);
-  FILE *fp = FileSystem::GetInstance()->OpenResource(fileName, "rb");
   // Read Modules
   fread(&nModules, sizeof(int), 1, fp);
   modules = new Module[nModules];
@@ -54,9 +50,29 @@ void Sprite::LoadSprite(const char *name)
     fread(frames[i].vertices, sizeof(float), frames[i].nVertices * 2, fp);
     fread(frames[i].texcoord, sizeof(float), frames[i].nVertices * 2, fp);
   }
+  
+  texture = Texture::LoadTexturePNG(fp);
 }
 
+// Load Sprite From file name
+void Sprite::LoadSprite(const char *name)
+{
+  char fileName[255];
+  
+  sprintf(fileName, "%s.bin", name);
+  FILE *fp = FileSystem::GetInstance()->OpenResource(fileName, "rb");
+  
+  if (!fp)
+  {
+    LOGE("Couldn't Load texture");
+    return;
+  }
+  
+  LoadSprite(fp);
+  fclose(fp);
+}
 
+// Draw A Frame.
 void Sprite::DrawFrame(int frame, int x, int y)
 {
   Graphics2D *graphic = Graphics2D::GetInstance();
@@ -66,6 +82,7 @@ void Sprite::DrawFrame(int frame, int x, int y)
   }
 }
 
+// Draw A Module
 void Sprite::DrawModule(int module, int x, int y)
 {
   Graphics2D *graphic = Graphics2D::GetInstance();

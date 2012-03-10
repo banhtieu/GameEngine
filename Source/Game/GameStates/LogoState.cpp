@@ -7,7 +7,7 @@
 //
 
 #include "LogoState.h"
-#include "BackgroundData.h"
+//#include "BackgroundData.h"
 #include "logo.h"
 #include "MainMenuState.h"
 void LogoState::Init()

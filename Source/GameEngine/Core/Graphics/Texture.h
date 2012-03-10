@@ -23,6 +23,7 @@ public:
   Texture();
   virtual ~Texture();
   
+  static Texture* LoadTexturePNG(FILE *fp);
   static Texture* LoadTexturePNG(const char *filename);
 };
 

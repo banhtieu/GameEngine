@@ -35,6 +35,7 @@ public:
   Sprite(const char *name);
   ~Sprite();
   void LoadSprite(const char *name);
+  void LoadSprite(FILE *fp);
   void DrawFrame(int frame, int x, int y);
   void DrawModule(int module, int x, int y);
 protected:

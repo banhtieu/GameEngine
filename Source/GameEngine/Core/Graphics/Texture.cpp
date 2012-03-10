@@ -26,17 +26,9 @@ Texture::~Texture()
   delete data;
 }
 
-
-Texture* Texture::LoadTexturePNG(const char *filename)
+// Load Texture From File
+Texture* Texture::LoadTexturePNG(FILE *fp)
 {
-  FILE *fp = FileSystem::GetInstance()->OpenResource(filename, "rb");
-  
-  if (!fp)
-  {
-    LOGE("Cannot Load File %s\n", filename);
-    return NULL;
-  }
-  
   Texture *readTexture = new Texture();
   unsigned int imageWidth, imageHeight;
   char *imageData;
@@ -91,12 +83,27 @@ Texture* Texture::LoadTexturePNG(const char *filename)
   delete [] rowPtrs;
   png_destroy_read_struct(&pngPtr, &infoPtr, NULL);
   
-  fclose(fp);
-  
   readTexture->width = imageWidth;
   readTexture->height = imageHeight;
   readTexture->data = imageData;
   readTexture->nChannels = channels;
   
   return readTexture;
+}
+
+// Load Texture From File with File name
+Texture* Texture::LoadTexturePNG(const char *filename)
+{
+  FILE *fp = FileSystem::GetInstance()->OpenResource(filename, "rb");
+  
+  if (!fp)
+  {
+    LOGE("Cannot Load File %s\n", filename);
+    return NULL;
+  }
+  
+  Texture *result = Texture::LoadTexturePNG(fp);
+  fclose(fp);
+  
+  return result;
 }
