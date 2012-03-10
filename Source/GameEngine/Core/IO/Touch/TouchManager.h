@@ -10,11 +10,11 @@
 #define GameEngine_TouchManager_h
 
 #include "Touch.h"
-#include <vector>
+#include <list>
 
 using namespace std;
 
-typedef vector<Touch*> TouchList;
+typedef list<Touch*> TouchList;
 
 class TouchManager:public Singleton<TouchManager>
 {
