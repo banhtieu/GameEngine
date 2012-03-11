@@ -8,7 +8,7 @@
 
 #include "InGameState.h"
 #include "logo.h"
-#include "Strings.h"
+#include "ExportedStrings.h"
 #include "BackgroundData.h"
 #include <Box2D/Box2D.h>
 
@@ -23,7 +23,7 @@ void InGameState::Init()
   mainActor->SetFlippedX(false);
   
   stringManager = new StringManager();
-  stringManager->Load("strings.en.bin");
+  stringManager->Load("strings.vi.bin");
   stringManager->SetColor(Color(1.0f, 0.0f, 0.0f, 1.0f));
 // Init 
   CreateWorld();
@@ -67,7 +67,7 @@ void InGameState::Render(Graphics2D *g)
     g->DrawTexture(background, i + bgFrameData[FRONT1].w, 0, bgFrameData[FRONT2]);
   }
   
-  stringManager->Draw("Khiem is Good all the time", 10, 10);
+  stringManager->Draw(STR_INGAME_INTRO, 10, 10);
   g->Save();
   g->ConcatTrasform(Matrix33::TranslateMatrix(SCREEN_WD2 - bicycle->GetPosition().x * 10, SCREEN_HD2 + 200) * Matrix33::ScaleMatrix(1.0f, -1.0f));
   

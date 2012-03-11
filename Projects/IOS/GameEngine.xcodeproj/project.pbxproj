@@ -213,7 +213,6 @@
 		372FC5C0150519D8009376E0 /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchManager.h; sourceTree = "<group>"; };
 		37619982150B8E20003B400F /* strings.en.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = strings.en.bin; path = ../../../Binary/strings.en.bin; sourceTree = "<group>"; };
 		37619983150B8E20003B400F /* strings.vi.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = strings.vi.bin; path = ../../../Binary/strings.vi.bin; sourceTree = "<group>"; };
-		37619986150B8EBB003B400F /* Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Strings.h; path = ../../../Binary/Strings.h; sourceTree = "<group>"; };
 		3781E2DE14F53A6E006E426E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3781E2E114F53F49006E426E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../Binary/logo.png; sourceTree = "<group>"; };
 		3781E2E314F53F88006E426E /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = ../../../Binary/Shader.fsh; sourceTree = "<group>"; };
@@ -263,6 +262,7 @@
 		37F6F40C14F530B00028EDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		37F6F42B14F532C70028EDC4 /* MyGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyGame.cpp; path = ../../../Source/Game/MyGame.cpp; sourceTree = "<group>"; };
 		37F6F42C14F532C70028EDC4 /* MyGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyGame.h; path = ../../../Source/Game/MyGame.h; sourceTree = "<group>"; };
+		37FFAD3E150C7E8000571DA1 /* ExportedStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ExportedStrings.h; path = ../../../Source/Game/Generated/ExportedStrings.h; sourceTree = "<group>"; };
 		C364976214F68E2200E4630A /* LogoState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogoState.cpp; sourceTree = "<group>"; };
 		C364976314F68E2200E4630A /* LogoState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoState.h; sourceTree = "<group>"; };
 		C399351614FE613200AA4169 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
@@ -538,7 +538,7 @@
 		37D6F22C14FFCD2300008965 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				37619986150B8EBB003B400F /* Strings.h */,
+				37FFAD3E150C7E8000571DA1 /* ExportedStrings.h */,
 				37D6F22D14FFCD3500008965 /* logo.h */,
 			);
 			name = Generated;
