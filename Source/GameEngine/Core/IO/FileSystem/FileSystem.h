@@ -19,7 +19,7 @@ public:
   virtual char *GetResourceContent(const char *filename);
   virtual FILE *OpenResource(const char *filename, const char *mode);
   virtual FILE *OpenDocument(const char *filename, const char *mode);
-protected:
+public:
   char *documentPath;
   char *resourcePath;
 };

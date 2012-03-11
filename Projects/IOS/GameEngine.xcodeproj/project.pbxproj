@@ -93,6 +93,13 @@
 		37F6F40D14F530B00028EDC4 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37F6F40B14F530B00028EDC4 /* ViewController_iPad.xib */; };
 		37F6F42E14F532C70028EDC4 /* MyGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F6F42B14F532C70028EDC4 /* MyGame.cpp */; };
 		C364976414F68E2200E4630A /* LogoState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C364976214F68E2200E4630A /* LogoState.cpp */; };
+		C36DE9F0150CE05900575EAD /* ak.xml in Resources */ = {isa = PBXBuildFile; fileRef = C36DE9EF150CE05900575EAD /* ak.xml */; };
+		C36DE9F1150CE5BC00575EAD /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36DE9EB150CD78D00575EAD /* tinyxml.cpp */; };
+		C36DE9F2150CE5BC00575EAD /* tinyxml.h in Sources */ = {isa = PBXBuildFile; fileRef = C36DE9EC150CD78D00575EAD /* tinyxml.h */; };
+		C36DE9F3150CE5F100575EAD /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36DE9E9150CD78D00575EAD /* tinystr.cpp */; };
+		C36DE9F4150CE5F100575EAD /* tinystr.h in Sources */ = {isa = PBXBuildFile; fileRef = C36DE9EA150CD78D00575EAD /* tinystr.h */; };
+		C36DE9F5150CE5F100575EAD /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36DE9ED150CD78D00575EAD /* tinyxmlerror.cpp */; };
+		C36DE9F6150CE5F100575EAD /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36DE9EE150CD78D00575EAD /* tinyxmlparser.cpp */; };
 		C399353714FE613200AA4169 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399351614FE613200AA4169 /* Application.cpp */; };
 		C399353814FE613200AA4169 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399351914FE613200AA4169 /* Device.cpp */; };
 		C399353914FE613200AA4169 /* Graphics2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C399351F14FE613200AA4169 /* Graphics2D.cpp */; };
@@ -262,9 +269,16 @@
 		37F6F40C14F530B00028EDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		37F6F42B14F532C70028EDC4 /* MyGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyGame.cpp; path = ../../../Source/Game/MyGame.cpp; sourceTree = "<group>"; };
 		37F6F42C14F532C70028EDC4 /* MyGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyGame.h; path = ../../../Source/Game/MyGame.h; sourceTree = "<group>"; };
-		37FFAD3E150C7E8000571DA1 /* ExportedStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ExportedStrings.h; path = ../../../Source/Game/Generated/ExportedStrings.h; sourceTree = "<group>"; };
+		37FFAD3E150C7E8000571DA1 /* ExportedStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExportedStrings.h; path = ../../../Source/Game/Generated/ExportedStrings.h; sourceTree = "<group>"; };
 		C364976214F68E2200E4630A /* LogoState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogoState.cpp; sourceTree = "<group>"; };
 		C364976314F68E2200E4630A /* LogoState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoState.h; sourceTree = "<group>"; };
+		C36DE9E9150CD78D00575EAD /* tinystr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
+		C36DE9EA150CD78D00575EAD /* tinystr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
+		C36DE9EB150CD78D00575EAD /* tinyxml.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
+		C36DE9EC150CD78D00575EAD /* tinyxml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
+		C36DE9ED150CD78D00575EAD /* tinyxmlerror.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
+		C36DE9EE150CD78D00575EAD /* tinyxmlparser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		C36DE9EF150CE05900575EAD /* ak.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ak.xml; sourceTree = "<group>"; };
 		C399351614FE613200AA4169 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		C399351714FE613200AA4169 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		C399351814FE613200AA4169 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -564,6 +578,7 @@
 		37F6F3EA14F530B00028EDC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C36DE9E7150CD76600575EAD /* tinyXML */,
 				3724465F150222CD00DA2202 /* Box2D */,
 				3781E2EB14F5415D006E426E /* LIBPNG */,
 				3781E2DE14F53A6E006E426E /* libz.dylib */,
@@ -600,6 +615,7 @@
 		37F6F42414F532580028EDC4 /* Binary */ = {
 			isa = PBXGroup;
 			children = (
+				C36DE9EF150CE05900575EAD /* ak.xml */,
 				37619982150B8E20003B400F /* strings.en.bin */,
 				37619983150B8E20003B400F /* strings.vi.bin */,
 				37D6F22E14FFCDD600008965 /* logo.bin */,
@@ -672,6 +688,19 @@
 			);
 			name = GameStates;
 			path = ../../../Source/Game/GameStates;
+			sourceTree = "<group>";
+		};
+		C36DE9E7150CD76600575EAD /* tinyXML */ = {
+			isa = PBXGroup;
+			children = (
+				C36DE9E9150CD78D00575EAD /* tinystr.cpp */,
+				C36DE9EA150CD78D00575EAD /* tinystr.h */,
+				C36DE9EB150CD78D00575EAD /* tinyxml.cpp */,
+				C36DE9EC150CD78D00575EAD /* tinyxml.h */,
+				C36DE9ED150CD78D00575EAD /* tinyxmlerror.cpp */,
+				C36DE9EE150CD78D00575EAD /* tinyxmlparser.cpp */,
+			);
+			name = tinyXML;
 			sourceTree = "<group>";
 		};
 		C399351414FE613200AA4169 /* Core */ = {
@@ -852,6 +881,7 @@
 				37D6F22F14FFCDD600008965 /* logo.bin in Resources */,
 				37619984150B8E20003B400F /* strings.en.bin in Resources */,
 				37619985150B8E20003B400F /* strings.vi.bin in Resources */,
+				C36DE9F0150CE05900575EAD /* ak.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,6 +892,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36DE9F3150CE5F100575EAD /* tinystr.cpp in Sources */,
+				C36DE9F4150CE5F100575EAD /* tinystr.h in Sources */,
+				C36DE9F5150CE5F100575EAD /* tinyxmlerror.cpp in Sources */,
+				C36DE9F6150CE5F100575EAD /* tinyxmlparser.cpp in Sources */,
+				C36DE9F1150CE5BC00575EAD /* tinyxml.cpp in Sources */,
+				C36DE9F2150CE5BC00575EAD /* tinyxml.h in Sources */,
 				37F6F3FC14F530B00028EDC4 /* main.m in Sources */,
 				37F6F42E14F532C70028EDC4 /* MyGame.cpp in Sources */,
 				3781E30214F5415D006E426E /* png.c in Sources */,
@@ -1038,6 +1074,7 @@
 				GCC_PREFIX_HEADER = "GameEngine/GameEngine-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				HEADER_SEARCH_PATHS = (
+					../../Library/tinyXML,
 					../../Source/Game,
 					../../Library/Box2D,
 					../../Source/GameEngine,
@@ -1059,6 +1096,7 @@
 				GCC_PREFIX_HEADER = "GameEngine/GameEngine-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				HEADER_SEARCH_PATHS = (
+					../../Library/tinyXML,
 					../../Source/Game,
 					../../Library/Box2D,
 					../../Source/GameEngine,

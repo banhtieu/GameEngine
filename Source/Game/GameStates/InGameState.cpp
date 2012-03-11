@@ -27,6 +27,18 @@ void InGameState::Init()
   stringManager->SetColor(Color(1.0f, 0.0f, 0.0f, 1.0f));
 // Init 
   CreateWorld();
+
+  
+  //read XML
+  char filepath[256];
+  sprintf(filepath,"%s/ak.xml",FileSystem::GetInstance()->resourcePath);
+  TiXmlDocument* doc= new TiXmlDocument(filepath);
+  bool xxx = doc->LoadFile();
+  TiXmlElement* root = doc->FirstChildElement( "ITEM_EN" );
+  TiXmlElement* child = root->FirstChildElement("SUPPORT");
+  const char* gg = new char[24];
+  gg= child->GetText();// gg="Hehe"
+  // end read XML
 }
 
 

@@ -27,5 +27,6 @@
 #include "Core/Common/Device.h"
 #include "Core/Common/Application.h"
 
+#include "tinyxml.h"
 
 #endif
