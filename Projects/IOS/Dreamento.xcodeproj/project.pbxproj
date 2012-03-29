@@ -267,16 +267,16 @@
 		37D6F22A14FFC1CC00008965 /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
 		37EBD97A150B5D6000EE9561 /* StringManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringManager.h; sourceTree = "<group>"; };
 		37EBD97C150B607600EE9561 /* StringManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringManager.cpp; sourceTree = "<group>"; };
-		37F6F3E714F530B00028EDC4 /* Dreameto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreameto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F6F3E714F530B00028EDC4 /* Dreamento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreamento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F6F3EB14F530B00028EDC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37F6F3ED14F530B00028EDC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		37F6F3EF14F530B00028EDC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		37F6F3F114F530B00028EDC4 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		37F6F3F314F530B00028EDC4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		37F6F3F714F530B00028EDC4 /* Dreameto-Info.plist */ = {isa = PBXFileReference; path = "Dreameto-Info.plist"; sourceTree = "<group>"; };
+		37F6F3F714F530B00028EDC4 /* Dreamento-Info.plist */ = {isa = PBXFileReference; path = "Dreamento-Info.plist"; sourceTree = "<group>"; };
 		37F6F3F914F530B00028EDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37F6F3FB14F530B00028EDC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		37F6F3FD14F530B00028EDC4 /* Dreameto-Prefix.pch */ = {isa = PBXFileReference; path = "Dreameto-Prefix.pch"; sourceTree = "<group>"; };
+		37F6F3FD14F530B00028EDC4 /* Dreamento-Prefix.pch */ = {isa = PBXFileReference; path = "Dreamento-Prefix.pch"; sourceTree = "<group>"; };
 		37F6F40914F530B00028EDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		37F6F40C14F530B00028EDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		37F6F42B14F532C70028EDC4 /* MyGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyGame.cpp; path = ../../../Source/Game/MyGame.cpp; sourceTree = "<group>"; };
@@ -615,7 +615,7 @@
 		37F6F3E814F530B00028EDC4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37F6F3E714F530B00028EDC4 /* Dreameto.app */,
+				37F6F3E714F530B00028EDC4 /* Dreamento.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -650,10 +650,10 @@
 		37F6F3F614F530B00028EDC4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				37F6F3F714F530B00028EDC4 /* Dreameto-Info.plist */,
+				37F6F3F714F530B00028EDC4 /* Dreamento-Info.plist */,
 				37F6F3F814F530B00028EDC4 /* InfoPlist.strings */,
 				37F6F3FB14F530B00028EDC4 /* main.m */,
-				37F6F3FD14F530B00028EDC4 /* Dreameto-Prefix.pch */,
+				37F6F3FD14F530B00028EDC4 /* Dreamento-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -874,9 +874,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37F6F3E614F530B00028EDC4 /* Dreameto */ = {
+		37F6F3E614F530B00028EDC4 /* Dreamento */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37F6F41014F530B00028EDC4 /* Build configuration list for PBXNativeTarget "Dreameto" */;
+			buildConfigurationList = 37F6F41014F530B00028EDC4 /* Build configuration list for PBXNativeTarget "Dreamento" */;
 			buildPhases = (
 				37F6F3E314F530B00028EDC4 /* Sources */,
 				37F6F3E414F530B00028EDC4 /* Frameworks */,
@@ -886,9 +886,9 @@
 			);
 			dependencies = (
 			);
-			name = Dreameto;
+			name = Dreamento;
 			productName = GameEngine;
-			productReference = 37F6F3E714F530B00028EDC4 /* Dreameto.app */;
+			productReference = 37F6F3E714F530B00028EDC4 /* Dreamento.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -899,7 +899,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = 37F6F3E114F530B00028EDC4 /* Build configuration list for PBXProject "Dreameto" */;
+			buildConfigurationList = 37F6F3E114F530B00028EDC4 /* Build configuration list for PBXProject "Dreamento" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -911,7 +911,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37F6F3E614F530B00028EDC4 /* Dreameto */,
+				37F6F3E614F530B00028EDC4 /* Dreamento */,
 			);
 		};
 /* End PBXProject section */
@@ -1130,7 +1130,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GameEngine/Dreameto-Prefix.pch";
+				GCC_PREFIX_HEADER = "GameEngine/Dreamento-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				HEADER_SEARCH_PATHS = (
 					../../Library/tinyXML,
@@ -1138,12 +1138,12 @@
 					../../Library/Box2D,
 					../../Source/GameEngine,
 				);
-				INFOPLIST_FILE = "GameEngine/Dreameto-Info.plist";
+				INFOPLIST_FILE = "GameEngine/Dreamento-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Library/Binary\"",
 				);
-				PRODUCT_NAME = Dreameto;
+				PRODUCT_NAME = Dreamento;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1152,7 +1152,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GameEngine/Dreameto-Prefix.pch";
+				GCC_PREFIX_HEADER = "GameEngine/Dreamento-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				HEADER_SEARCH_PATHS = (
 					../../Library/tinyXML,
@@ -1160,12 +1160,12 @@
 					../../Library/Box2D,
 					../../Source/GameEngine,
 				);
-				INFOPLIST_FILE = "GameEngine/Dreameto-Info.plist";
+				INFOPLIST_FILE = "GameEngine/Dreamento-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Library/Binary\"",
 				);
-				PRODUCT_NAME = Dreameto;
+				PRODUCT_NAME = Dreamento;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1173,7 +1173,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37F6F3E114F530B00028EDC4 /* Build configuration list for PBXProject "Dreameto" */ = {
+		37F6F3E114F530B00028EDC4 /* Build configuration list for PBXProject "Dreamento" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37F6F40E14F530B00028EDC4 /* Debug */,
@@ -1182,7 +1182,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37F6F41014F530B00028EDC4 /* Build configuration list for PBXNativeTarget "Dreameto" */ = {
+		37F6F41014F530B00028EDC4 /* Build configuration list for PBXNativeTarget "Dreamento" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37F6F41114F530B00028EDC4 /* Debug */,

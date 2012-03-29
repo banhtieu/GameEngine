@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "37F6F3E614F530B00028EDC4"
                BuildableName = "AnimoGame.app"
-               BlueprintName = "Dreameto"
-               ReferencedContainer = "container:Dreameto.xcodeproj">
+               BlueprintName = "Dreamento"
+               ReferencedContainer = "container:Dreamento.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,8 +33,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37F6F3E614F530B00028EDC4"
             BuildableName = "AnimoGame.app"
-            BlueprintName = "Dreameto"
-            ReferencedContainer = "container:Dreameto.xcodeproj">
+            BlueprintName = "Dreamento"
+            ReferencedContainer = "container:Dreamento.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,8 +51,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37F6F3E614F530B00028EDC4"
             BuildableName = "AnimoGame.app"
-            BlueprintName = "Dreameto"
-            ReferencedContainer = "container:Dreameto.xcodeproj">
+            BlueprintName = "Dreamento"
+            ReferencedContainer = "container:Dreamento.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,8 +69,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37F6F3E614F530B00028EDC4"
             BuildableName = "AnimoGame.app"
-            BlueprintName = "Dreameto"
-            ReferencedContainer = "container:Dreameto.xcodeproj">
+            BlueprintName = "Dreamento"
+            ReferencedContainer = "container:Dreamento.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
