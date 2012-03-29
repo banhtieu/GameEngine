@@ -58,7 +58,7 @@ void StringManager::Load(const char *filename)
 // Draw a String with Index
 void StringManager::Draw(int index, int x, int y, int flag)
 {
-  if (index < numStrings && index > 0)
+  if (index < numStrings && index >= 0)
   {
     DrawChars(strings[index], x, y, flag);
   }

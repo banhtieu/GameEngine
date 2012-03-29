@@ -7,10 +7,13 @@
 //
 
 #include "Engine.h"
-
+#include "MediaPlayerManager.h"
 Application::Application():currentState(0)
 {
   new TouchManager();
+  curLanguage = 0;
+  isSoundOn = true;
+  mediaPlayer = new MediaPlayerManager();
 };
 
 Application::~Application()
@@ -61,4 +64,14 @@ void Application::SwitchState(State *newState)
   
   currentState = newState;
   currentState->Init();
+}
+
+// Get current milisecond
+long Application::GetCurrentTime()
+{
+#ifdef PLATFORM_OS
+  return time(NULL);
+#else
+  return 0;
+#endif
 }

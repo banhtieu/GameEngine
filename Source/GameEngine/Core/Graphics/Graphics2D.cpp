@@ -114,9 +114,16 @@ void Graphics2D::SetTexture(Texture *texture)
 {
   if (!texture->textureId)
   {
+    int type = GL_RGBA;
+    
+    if (texture->nChannels == 3)
+    {
+      type = GL_RGB;
+    }
+    
     glGenTextures(1, &texture->textureId);
     glBindTexture(GL_TEXTURE_2D, texture->textureId);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, texture->width, texture->height, 0, GL_RGBA, GL_UNSIGNED_BYTE, texture->data);
+    glTexImage2D(GL_TEXTURE_2D, 0, type, texture->width, texture->height, 0, type, GL_UNSIGNED_BYTE, texture->data);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     SAFE_DEL_ARRAY(texture->data);

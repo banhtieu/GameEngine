@@ -30,9 +30,14 @@ public:
   virtual void Update();
   
   virtual TouchList* GetTouches();
-  virtual int GetNumberOfTouches();
-  virtual bool IsTouchInRect(int x, int y, int w, int h);
+  virtual Touch *GetFirstTouch();
   
+  virtual int GetNumberOfTouches();
+  virtual bool HasNewTouch();
+  virtual bool IsTouchInRect(int x, int y, int w, int h);
+  virtual bool IsTouchDownInRect(int x, int y, int w, int h);
+  virtual bool IsTouchUpInRect(int x, int y, int w, int h);
+  virtual bool IsTouchMovingInRect(int x, int y, int w, int h);
 private:
   TouchList *touches;
 };

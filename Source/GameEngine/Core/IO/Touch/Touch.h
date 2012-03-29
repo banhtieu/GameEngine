@@ -52,6 +52,9 @@ public:
   // is Just Touch Up
   virtual bool IsJustUp();
   
+  // is Touch moving
+  virtual bool IsMoving();
+  
   // the current Data
   TouchData data;
   

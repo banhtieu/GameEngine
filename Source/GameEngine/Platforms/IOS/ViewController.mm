@@ -79,7 +79,7 @@ FileSystem *fileSystem;
 {
     // Return YES for supported orientations
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
     } else {
         return YES;
     }
@@ -89,7 +89,7 @@ FileSystem *fileSystem;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
   TouchManager *touchManager = TouchManager::GetInstance();
-  NSLog(@"Number of Touches: %d", [touches count]);
+
   for (UITouch *touch in touches)
   {
     CGPoint location = [touch locationInView:self.view];
@@ -110,8 +110,6 @@ FileSystem *fileSystem;
     {
         type = TOUCH_CANCELLED;
     }
-    
-    NSLog(@"id & type: %ld - %d", (long) touch, type);
     
     touchManager->AddTouch((long) touch, location.x * 2, location.y * 2, type);
   }

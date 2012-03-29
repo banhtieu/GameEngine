@@ -10,6 +10,7 @@
 #define GameEngine_BTApplication_h
 
 
+class MediaPlayerManager;
 class TouchScreenBase;
 class Application:public Singleton<Application>
 {
@@ -21,10 +22,15 @@ public:
   virtual void Update();
   virtual void Free();
   virtual void SwitchState(State *newState);
+  long GetCurrentTime();// milisecond
 protected:
   State *currentState;
 public:
   TouchScreenBase*		m_touchScreen;
+  MediaPlayerManager* mediaPlayer;
+  
+  int curLanguage; //en:0 vn:1
+  bool isSoundOn;
 };
 
 #endif

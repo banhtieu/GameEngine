@@ -26,6 +26,7 @@
 #include "Core/Common/State.h"
 #include "Core/Common/Device.h"
 #include "Core/Common/Application.h"
+#include "Core/Common/MenuInstance.h"
 
 #include "tinyxml.h"
 
