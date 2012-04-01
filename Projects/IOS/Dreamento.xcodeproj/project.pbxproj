@@ -273,10 +273,10 @@
 		37F6F3EF14F530B00028EDC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		37F6F3F114F530B00028EDC4 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		37F6F3F314F530B00028EDC4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		37F6F3F714F530B00028EDC4 /* Dreamento-Info.plist */ = {isa = PBXFileReference; path = "Dreamento-Info.plist"; sourceTree = "<group>"; };
+		37F6F3F714F530B00028EDC4 /* Dreamento-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dreamento-Info.plist"; sourceTree = "<group>"; };
 		37F6F3F914F530B00028EDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37F6F3FB14F530B00028EDC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		37F6F3FD14F530B00028EDC4 /* Dreamento-Prefix.pch */ = {isa = PBXFileReference; path = "Dreamento-Prefix.pch"; sourceTree = "<group>"; };
+		37F6F3FD14F530B00028EDC4 /* Dreamento-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dreamento-Prefix.pch"; sourceTree = "<group>"; };
 		37F6F40914F530B00028EDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		37F6F40C14F530B00028EDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		37F6F42B14F532C70028EDC4 /* MyGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyGame.cpp; path = ../../../Source/Game/MyGame.cpp; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 		C3CF01FC1512608800F4AFC5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		C3CF01FD1512608800F4AFC5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C3EB35A0151100A30053ED9C /* MenuBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuBar.h; path = ../../../Source/Game/Generated/MenuBar.h; sourceTree = "<group>"; };
-		C3EB35A1151100A30053ED9C /* MenuMenuBG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuMenuBG.h; path = ../../../Source/Game/Generated/MenuMenuBG.h; sourceTree = "<group>"; };
+		C3EB35A1151100A30053ED9C /* MainMenuBG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuBG.h; path = ../../../Source/Game/Generated/MainMenuBG.h; sourceTree = "<group>"; };
 		C3EB35A2151100A30053ED9C /* Splash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Splash.h; path = ../../../Source/Game/Generated/Splash.h; sourceTree = "<group>"; };
 		C3EB35A7151101BD0053ED9C /* MenuBar.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = MenuBar.bin; path = ../../../Binary/MenuBar.bin; sourceTree = "<group>"; };
 		C3EB35A8151101BD0053ED9C /* MainMenuBG.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = MainMenuBG.bin; path = ../../../Binary/MainMenuBG.bin; sourceTree = "<group>"; };
@@ -594,7 +594,7 @@
 				37FF3CC4151A132B00FDD319 /* SoundPack.h */,
 				37D6115D151481CD00047978 /* Animals.h */,
 				C3EB35A0151100A30053ED9C /* MenuBar.h */,
-				C3EB35A1151100A30053ED9C /* MenuMenuBG.h */,
+				C3EB35A1151100A30053ED9C /* MainMenuBG.h */,
 				C3EB35A2151100A30053ED9C /* Splash.h */,
 				37FFAD3E150C7E8000571DA1 /* ExportedStrings.h */,
 			);

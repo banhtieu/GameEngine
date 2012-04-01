@@ -22,15 +22,6 @@ public:
   virtual void Free();
 protected:
   Sprite *bgSprite;
-  Sprite *menuSprite;
-  StringManager *stringManager;
-  int numMenuItems;
-  MenuInstance *menuList[NUM_MENU];
-  
-  int playX, playY;
-  int oldX, oldY;
-  int aX;
-  bool selecting;
 };
 
 

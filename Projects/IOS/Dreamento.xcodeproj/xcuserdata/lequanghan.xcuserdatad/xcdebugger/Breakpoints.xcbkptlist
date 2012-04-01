@@ -143,24 +143,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../Source/Game/GameStates/InGameState.cpp"
-         timestampString = "353167135.528711"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/InGameState.cpp"
          timestampString = "353168647.150186"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "40"
-         endingLineNumber = "40"
-         landmarkName = "InGameState::Update()"
-         landmarkType = "5">
+         endingLineNumber = "40">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -185,19 +172,6 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "26"
          endingLineNumber = "26">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "132"
-         endingLineNumber = "132"
-         landmarkName = "MainMenuState::Update()"
-         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -229,32 +203,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354036080.934151"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
-         landmarkName = "MainMenuState::Init()"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "71"
-         endingLineNumber = "71"
-         landmarkName = "MainMenuState::Render(Graphics2D *g)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "../../Source/GameEngine/Core/Common/MenuInstance.cpp"
          timestampString = "353515419.562974"
          startingColumnNumber = "9223372036854775807"
@@ -275,149 +223,6 @@
          startingLineNumber = "15"
          endingLineNumber = "15"
          landmarkName = "MenuInstance::isPressed()"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354036080.934151"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
-         landmarkName = "MainMenuState::Render(Graphics2D *g)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "83"
-         endingLineNumber = "83"
-         landmarkName = "MainMenuState::Render(Graphics2D *g)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "90"
-         endingLineNumber = "90"
-         landmarkName = "MainMenuState::Render(Graphics2D *g)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "88"
-         endingLineNumber = "88"
-         landmarkName = "MainMenuState::Render(Graphics2D *g)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "114"
-         endingLineNumber = "114"
-         landmarkName = "MainMenuState::Update()"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "117"
-         endingLineNumber = "117"
-         landmarkName = "MainMenuState::Update()"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "127"
-         endingLineNumber = "127"
-         landmarkName = "MainMenuState::Update()"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "128"
-         endingLineNumber = "128"
-         landmarkName = "MainMenuState::Update()"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "73"
-         endingLineNumber = "73"
-         landmarkName = "MainMenuState::Render(Graphics2D *g)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76"
-         landmarkName = "MainMenuState::Render(Graphics2D *g)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../Source/Game/GameStates/MainMenuState.cpp"
-         timestampString = "354037144.44435"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
-         landmarkName = "MainMenuState::Render(Graphics2D *g)"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
